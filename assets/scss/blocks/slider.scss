@@ -1,0 +1,37 @@
+.main-slider {
+    width: 100%;
+
+    &__content {
+        width: 100%;
+    }
+}
+
+.slider-item {
+    position: relative;
+    height: 312px;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+
+    &__content {
+        padding-left: 40px;
+        width: 50%;
+    }
+
+    &__title {
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 700;
+        margin-bottom: 16px;
+
+        &--white {
+            color: #fff;
+        }
+
+        &--yellow {
+            color: $yellow;
+        }
+    }
+}

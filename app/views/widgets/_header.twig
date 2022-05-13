@@ -1,0 +1,84 @@
+<header class="main-header">
+   <div class="container">
+      <div class="main-header__content">
+         <!--div class="menu-toggle main-header__menu-toggle">
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+         </div-->
+         <div class="main-header__top header-top">
+            <div class="header-top__logo logo-block">
+               <a href="/" class="logo-block__link">
+                  <img 
+                     src="{{ base_url }}assets/img/icons/Frame 9.svg" 
+                     alt="Металлопрокат Алматы - Abiward" 
+                     class="logo-block__img"
+                  >
+               </a>
+            </div>
+            <div class="haeder-top__promo header-promo">
+               <h2 class="header-promo__title">
+                  Металлопрокат
+                  <span class="header-promo__title--color">
+                      в Алматы
+                  </span>
+               </h2>
+               <div class="header-promo__label promo-label">
+                  <img 
+                     src="{{ base_url }}assets/img/icons/Frame 10.svg" 
+                     alt="Delivery Abiward" 
+                     class="promo-label__icon"
+                  >
+                  <span>По городу работает Доставка!</span>
+                  <span class="promo-label__dot"></span>
+                  <span>в течении дня</span>
+               </div>
+            </div>
+            <div class="header-top__contact header-contact">
+               <a href="tel:+77714613215" class="header-contact__phone">
+                  +7 771 461 32 15
+               </a>
+               <a href="#" class="header-contact__adress">
+                  Алматы, ул. Кабанбай Батыра, 104
+               </a>
+            </div>
+         </div>
+         <div class="main-header__bottom header-bottom">
+            <nav class="header-bottom__nav main-nav">
+               <ul class="main-nav__list">
+                  <li class="main-nav__li main-nav__li--active">
+                     <a href="#" class="main-nav__a">Главная</a>
+                  </li>
+                  <li class="main-nav__li">
+                     <a href="#" class="main-nav__a">О компании</a>
+                  </li>
+                  <li class="main-nav__li">
+                     <a href="#" class="main-nav__a">Продукция</a>
+                  </li>
+                  <li class="main-nav__li">
+                     <a href="#" class="main-nav__a">Прайс-лист</a>
+                  </li>
+                  <li class="main-nav__li">
+                     <a href="#" class="main-nav__a">Контакты</a>
+                  </li>
+               </ul>
+            </nav>
+            <div class="header-bottom__lang lang-switcher">
+               <a href="{% if lang != 'ru' %}{{ base_url }}{% else %}kk{% endif %}" class="lang-switcher__link">
+                  <img 
+                     src="{{ base_url }}assets/img/icons/planet-earth-svgrepo-com (1) 1.svg" 
+                     class="lang-switcher__icon" 
+                     alt="выбрать язык"
+                  >
+                  {% if lang != 'ru' %}Русский{% else %}Казакша{% endif %}
+               </a>
+            </div>
+            <div class="header-bottom__callback">
+               <button class="btn btn--yellow">
+                  Заказать звонок
+               </button>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>

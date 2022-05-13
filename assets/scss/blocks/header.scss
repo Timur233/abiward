@@ -1,0 +1,160 @@
+.main-header {
+    position: relative;
+    width: 100%;
+    color: $text;
+    z-index: 11;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding: spacer(7) 0;
+
+        // @media (max-width: 830px) {
+        //     padding: spacer(2) 0;
+        // }
+    }
+
+    &__top {
+        margin-bottom: 20px;
+    }
+}
+
+.header-top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+    &__logo {
+        margin-right: spacer(10);
+    }
+
+    &__promo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        margin-left: auto;
+    }
+}
+
+.header-promo {
+    &__title {
+        font-size: 17px;
+        font-weight: 500;
+        margin-bottom: 8px;
+
+        &--color {
+            color: $yellow;
+        }
+    }
+
+    &__label {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }   
+}
+
+.promo-label {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+
+    &__icon {
+        margin-right: 8px;
+    }
+
+    &__dot {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: $red;
+        margin: 0 8px;
+    }
+}
+
+.header-contact {
+    &__phone {
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 1.2;
+        color: $yellow;
+        margin-bottom: 8px;
+    }
+
+    &__adress {
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
+.header-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &__nav {
+        margin-right: auto;
+    }
+
+    &__callback {
+        margin-left: 28px;
+    }
+}
+
+.main-nav {
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 600;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    &__li {
+        padding: 8px 0;
+        transition: $midd-animation color;
+
+        &:not(:last-child) {
+            margin-right: 28px;
+        }
+
+        &:hover {
+            color: $yellow;
+        }
+
+        &--active {
+            text-decoration: underline;
+        }
+
+    }
+}
+
+.lang-switcher {
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: underline;
+    transition: $midd-animation color;
+
+    &__link {
+        display: flex;
+        align-items: center;
+    }
+
+    &:hover {
+        color: $yellow;
+    }
+    
+    &__icon {
+        margin-right: 8px;
+    }
+}

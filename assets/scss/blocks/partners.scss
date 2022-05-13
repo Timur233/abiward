@@ -1,0 +1,11 @@
+.partners-swiper {
+    &__logo {
+        width: 100%;
+    }
+    
+    &__item {
+        height: 120px;
+        display: flex;
+        align-items: center;
+    }
+}

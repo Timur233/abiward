@@ -1,0 +1,23 @@
+.main-slider {
+  width: 100%; }
+  .main-slider__content {
+    width: 100%; }
+
+.slider-item {
+  position: relative;
+  height: 312px;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center; }
+  .slider-item__content {
+    padding-left: 40px;
+    width: 50%; }
+  .slider-item__title {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 16px; }
+    .slider-item__title--white {
+      color: #fff; }

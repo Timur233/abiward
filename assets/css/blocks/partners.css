@@ -1,0 +1,7 @@
+.partners-swiper__logo {
+  width: 100%; }
+
+.partners-swiper__item {
+  height: 120px;
+  display: flex;
+  align-items: center; }

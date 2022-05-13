@@ -1,0 +1,40 @@
+.catalog {
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 24px
+    }
+
+    &__item {
+        background-color: $white;
+        border-radius: 12px;
+        box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
+        padding: 12px 16px;
+    }
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+
+    &__img {
+        margin-right: 24px;
+    }
+
+    &__name {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+
+    &__link {
+        font-size: 12px;
+        font-weight: 500;
+        color: #F75E2D;
+        text-decoration: underline;
+
+        &:hover {
+            color: darken($color: #F75E2D, $amount: 20);
+        }
+    }
+}
