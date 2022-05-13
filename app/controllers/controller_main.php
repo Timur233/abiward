@@ -12,10 +12,6 @@
             $data = Model_Main::get_data(LANG);	
             $data['footer']	= Model_Main::get_footer(LANG);
 
-            if (PROJECT_ID !== ''):
-                $data['building_steps'] = Model_Building_Steps::get_steps(LANG);
-            endif;
-
             View::generate('index.twig', $data);
         }
         
