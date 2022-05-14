@@ -2,6 +2,7 @@
     namespace app\models;
 
     use app\core\Model;
+    use app\core\DB;
 
     class Model_Main extends Model
     {
