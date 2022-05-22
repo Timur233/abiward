@@ -1,0 +1,6 @@
+.main-footer {
+  margin-top: spacer(20);
+  padding: spacer(8);
+  background: #f3f3f3; }
+  .main-footer__phone {
+    text-align: right; }

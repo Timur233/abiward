@@ -1,0 +1,21 @@
+.login-form {
+    max-width: 350px;
+    margin: auto;
+    padding: spacer(20) 0;
+    
+    & > form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+} 
+
+.site-settings {
+    &__group {
+        margin-bottom: spacer(6);
+    }
+
+    &__group:not(:nth-child(3n)) {
+        padding-right: spacer(4);
+    }
+}

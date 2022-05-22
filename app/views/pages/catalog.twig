@@ -1,0 +1,66 @@
+{{ include('widgets/_header.twig') }}
+
+{{ include('widgets/breadcrumbs.twig') }}
+
+<section class="main-catalog section">
+    <div class="container">
+        <div class="flex">
+            <div class="flex__3 main-catalog__sidebar">
+                <ul class="main-catalog__list main-catalog-list">
+
+                    {% if is_admin %}
+                        <li class="main-catalog-list__item {% if item.id == active_catalog.id %} main-catalog-list__item--active {% endif %}">
+                            <button 
+                                class="main-catalog-list__link modal-link"
+                                data-table="abi_catalog"
+                                data-command="INSERT" 
+                                data-fields="text=title|textarea=content|image=image"
+                            >
+                                    Создать
+                            </button>
+                        </li>
+                    {% endif %}
+
+                    {% for item in catalog_list %}
+                        <li class="main-catalog-list__item {% if item.id == active_catalog.id %} main-catalog-list__item--active {% endif %}">
+                            <a href="{{ base_url }}catalog/?id={{ item.id }}" class="main-catalog-list__link">
+                                {{ item.title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="flex__9 main-catalog__content main-content">
+                <h2>{{ active_catalog.title }}</h2>
+
+                {% if is_admin %}
+                <div class="flex" style="margin-bottom: 20px; gap: 16px">
+                    <button class="btn btn--yellow btn--outline modal-link" type="button" 
+                        data-table="abi_catalog"
+                        data-command="UPDATE" 
+                        data-fields="text=title|textarea=content|image=image"
+                        data-id="{{ active_catalog.id }}"
+                    >
+                        Редактировать 
+                    </button>  
+                    <button class="btn btn--red modal-link" type="button" 
+                        data-table="abi_catalog"
+                        data-command="DELETE" 
+                        data-id="{{ active_catalog.id }}"
+                    >
+                        Удалить 
+                    </button>
+                </div>   
+                {% endif %}
+
+                <img src="{{ source_url }}/uploads/{{ active_catalog.image }}" class="main-catalog__img">
+                {{ active_catalog.content|raw }}
+
+                {{ include('widgets/catalog_callback.twig') }}
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ include('widgets/_footer.twig') }}

@@ -29,6 +29,16 @@
             return $link;
         }
 
+        static function setGET($query) {
+            $params = explode('&', $query);
+
+            foreach ($params as $param) {
+                $param = explode('=', $param);
+
+                $_GET[$param[0]] = $param[1];
+            }
+        }
+
         static function start()
         {
             // контроллер и действие по умолчанию
@@ -37,6 +47,11 @@
 
             $base_link = str_replace('/index.php', '', $_SERVER['SCRIPT_NAME']);
             $link = str_replace($base_link, '', $_SERVER['REQUEST_URI']);
+            
+            if (preg_match('/\?(.*)/', $link, $query)):
+                Route::setGET($query[1]);
+            endif;
+
             $link = preg_replace(['/\/\?.*/', '/\?.*/'], '', $link);
             $link = Route::getLang($link);
 
@@ -103,10 +118,10 @@
         
         function ErrorPage404()
         {
-            $host = 'https://'.$_SERVER['HTTP_HOST'].'/';
-            header('HTTP/1.1 404 Not Found');
-            header("Status: 404 Not Found");
-            header('Location:'.$host.'404');
+            //$host = 'https://'.$_SERVER['HTTP_HOST'].'/';
+            //header('HTTP/1.1 404 Not Found');
+            //header("Status: 404 Not Found");
+            //header('Location:'.$host.'404');
 
             exit;
         }

@@ -1,0 +1,33 @@
+.contacts {
+    &__data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: spacer(10);
+        padding-right: spacer(10);
+        font-size: 16px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        display: flex;
+        gap: 12px;
+
+        &:not(:last-child) {
+            margin-bottom: spacer(4);
+        }
+    }
+
+    &__link {
+        text-decoration: underline;
+        font-weight: 600;
+
+        &:hover {
+            color: $yellow;
+        }
+    }
+}

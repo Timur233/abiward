@@ -1,10 +1,21 @@
-.callback-h {
-  background-position: center;
+.callback {
+  position: relative;
   background-size: cover; }
-  .callback-h::before {
+  .callback::before {
     content: '';
     position: absolute;
     left: 0;
     top: 0;
     right: 0;
-    bottom: 0; }
+    bottom: 0;
+    background-color: rgba(4, 4, 4, 0.5); }
+  .callback__section {
+    margin-top: spacer(20);
+    padding: spacer(15) 0; }
+  .callback__title {
+    color: #fff;
+    z-index: 11; }
+  .callback__group:not(:last-child) {
+    padding-right: spacer(6); }
+  .callback__btn {
+    height: 100%; }

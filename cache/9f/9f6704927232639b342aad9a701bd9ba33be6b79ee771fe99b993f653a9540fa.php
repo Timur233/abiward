@@ -39,41 +39,89 @@ class __TwigTemplate_441041c46b336091de425aaedd8f935802b4e1214d81efc04da4d23404d
         <div class=\"container\">
             <div class=\"main-slider-swiper swiper-container\">
                 <div class=\"swiper-wrapper\">
-                    <div 
-                        class=\"main-slider-swiper__item slider-item swiper-slide\"
-                        style=\"background-image: url(";
-        // line 8
-        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "assets/img/slider/main-slider-1.jpg);\"
-                    >
-                        <div class=\"slider-item__content\">
-                            <h3 class=\"slider-item__title\">
-                                Поставки металлопроката в любых объемах
-                            </h3>
-                            <a href=\"#\" class=\"btn btn--yellow\">
-                                Заказать звонок
-                            </a>
+                    ";
+        // line 6
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["slider"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 7
+            echo "                        <div 
+                            class=\"main-slider-swiper__item slider-item swiper-slide\"
+                            style=\"background-image: url('";
+            // line 9
+            echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
+            echo "uploads/";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "image", [], "any", false, false, false, 9), "html", null, true);
+            echo "');\"
+                        >
+                            <div class=\"slider-item__content\">
+                                ";
+            // line 12
+            echo twig_get_attribute($this->env, $this->source, $context["item"], "content", [], "any", false, false, false, 12);
+            echo "
+                                ";
+            // line 13
+            if (($context["is_admin"] ?? null)) {
+                // line 14
+                echo "                                    <button class=\"modal-link\" 
+                                        data-table=\"abi_slider\"
+                                        data-command=\"UPDATE\" 
+                                        data-fields=\"textarea=content|image=image\"
+                                        data-id=\"";
+                // line 18
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 18), "html", null, true);
+                echo "\"
+                                    >
+                                        редактировать
+                                    </button>
+                                ";
+            }
+            // line 23
+            echo "                            </div>
+
+                            ";
+            // line 25
+            if (($context["is_admin"] ?? null)) {
+                // line 26
+                echo "                                <button class=\"modal-link delete-link\" 
+                                    data-table=\"abi_slider\"
+                                    data-command=\"DELETE\" 
+                                    data-id=\"";
+                // line 29
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 29), "html", null, true);
+                echo "\"
+                                >
+                                    x
+                                </button>
+                            ";
+            }
+            // line 34
+            echo "
                         </div>
-                    </div>
-                    <div 
-                        class=\"main-slider-swiper__item slider-item swiper-slide\"
-                        style=\"background-image: url(";
-        // line 21
-        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "assets/img/slider/main-slider-2.jpg);\"
-                    >
-                        <div class=\"slider-item__content\">
-                            <h3 class=\"slider-item__title slider-item__title--white\">
-                                Широкий ассортимент <span class=\"slider-item__title--yellow\">продукции</span>
-                            </h3>
-                            <a href=\"#\" class=\"btn btn--yellow\">
-                                Продукция
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 37
+        echo "                </div>
             </div>
-        </div>
+            ";
+        // line 39
+        if (($context["is_admin"] ?? null)) {
+            // line 40
+            echo "                <br>
+                <button class=\"modal-link\" 
+                    data-table=\"abi_slider\"
+                    data-command=\"INSERT\" 
+                    data-fields=\"textarea=content|image=image\"
+                >
+                    + добавить
+                </button>
+            ";
+        }
+        // line 49
+        echo "        </div>
     </div>
 </section>";
     }
@@ -90,7 +138,7 @@ class __TwigTemplate_441041c46b336091de425aaedd8f935802b4e1214d81efc04da4d23404d
 
     public function getDebugInfo()
     {
-        return array (  62 => 21,  46 => 8,  37 => 1,);
+        return array (  124 => 49,  113 => 40,  111 => 39,  107 => 37,  99 => 34,  91 => 29,  86 => 26,  84 => 25,  80 => 23,  72 => 18,  66 => 14,  64 => 13,  60 => 12,  52 => 9,  48 => 7,  44 => 6,  37 => 1,);
     }
 
     public function getSourceContext()

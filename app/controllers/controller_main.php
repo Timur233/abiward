@@ -8,11 +8,18 @@
 
     class Controller_Main extends Controller
     {
-        function action_index() {
-            $data = Model_Main::get_data(LANG);	
-            $data['footer']	= Model_Main::get_footer(LANG);
+        public function __construct() {
+            $this->model = new Model_Main;
+        }
 
-            View::generate('index.twig', $data);
+        public function action_index() {
+            $data = $this->model->get_data();	
+            $data['page']           = [
+                'title' => 'Металлопрокат в Алматы',
+                'short_title' => 'Abiward',
+            ];
+
+            View::generate('pages/index.twig', $data);
         }
         
     }

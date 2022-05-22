@@ -1,0 +1,34 @@
+.callback {
+    position: relative;
+    background-size: cover;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(4, 4, 4, 0.5);
+    }
+
+    &__section {
+        margin-top: spacer(20);
+        padding: spacer(15) 0;
+    }
+
+    &__title {
+        color: #fff;
+        z-index: 11;
+    }
+
+    &__group {
+        &:not(:last-child) {
+            padding-right: spacer(6);
+        }
+    }
+
+    &__btn {
+        height: 100%;
+    }
+}

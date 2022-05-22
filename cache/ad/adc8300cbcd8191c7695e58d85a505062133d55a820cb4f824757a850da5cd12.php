@@ -44,11 +44,14 @@ class __TwigTemplate_9c3e91833de1d2a4e662706ab64a384f271c2617e941c4641beb2b979fa
          </div-->
          <div class=\"main-header__top header-top\">
             <div class=\"header-top__logo logo-block\">
-               <a href=\"/\" class=\"logo-block__link\">
+               <a href=\"";
+        // line 11
+        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
+        echo "\" class=\"logo-block__link\">
                   <img 
                      src=\"";
         // line 13
-        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
+        echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         echo "assets/img/icons/Frame 9.svg\" 
                      alt=\"Металлопрокат Алматы - Abiward\" 
                      class=\"logo-block__img\"
@@ -57,16 +60,16 @@ class __TwigTemplate_9c3e91833de1d2a4e662706ab64a384f271c2617e941c4641beb2b979fa
             </div>
             <div class=\"haeder-top__promo header-promo\">
                <h2 class=\"header-promo__title\">
-                  Металлопрокат
-                  <span class=\"header-promo__title--color\">
-                      в Алматы
-                  </span>
+                  ";
+        // line 21
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["settings"] ?? null), "site_title", [], "any", false, false, false, 21), "html", null, true);
+        echo "
                </h2>
                <div class=\"header-promo__label promo-label\">
                   <img 
                      src=\"";
-        // line 28
-        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
+        // line 25
+        echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         echo "assets/img/icons/Frame 10.svg\" 
                      alt=\"Delivery Abiward\" 
                      class=\"promo-label__icon\"
@@ -78,27 +81,45 @@ class __TwigTemplate_9c3e91833de1d2a4e662706ab64a384f271c2617e941c4641beb2b979fa
             </div>
             <div class=\"header-top__contact header-contact\">
                <a href=\"tel:+77714613215\" class=\"header-contact__phone\">
-                  +7 771 461 32 15
+                  ";
+        // line 36
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["settings"] ?? null), "site_phone", [], "any", false, false, false, 36), "html", null, true);
+        echo "
                </a>
                <a href=\"#\" class=\"header-contact__adress\">
-                  Алматы, ул. Кабанбай Батыра, 104
+                  ";
+        // line 39
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["settings"] ?? null), "site_adres", [], "any", false, false, false, 39), "html", null, true);
+        echo "
                </a>
             </div>
          </div>
          <div class=\"main-header__bottom header-bottom\">
             <nav class=\"header-bottom__nav main-nav\">
                <ul class=\"main-nav__list\">
-                  <li class=\"main-nav__li main-nav__li--active\">
-                     <a href=\"#\" class=\"main-nav__a\">Главная</a>
+                  <li class=\"main-nav__li\">
+                     <a href=\"";
+        // line 47
+        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
+        echo "\" class=\"main-nav__a\">Главная</a>
                   </li>
                   <li class=\"main-nav__li\">
-                     <a href=\"#\" class=\"main-nav__a\">О компании</a>
+                     <a href=\"";
+        // line 50
+        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
+        echo "pages/?id=1\" class=\"main-nav__a\">О компании</a>
                   </li>
                   <li class=\"main-nav__li\">
-                     <a href=\"#\" class=\"main-nav__a\">Продукция</a>
+                     <a href=\"";
+        // line 53
+        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
+        echo "catalog\" class=\"main-nav__a\">Продукция</a>
                   </li>
                   <li class=\"main-nav__li\">
-                     <a href=\"#\" class=\"main-nav__a\">Прайс-лист</a>
+                     <a href=\"";
+        // line 56
+        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
+        echo "pages/?id=3\" class=\"main-nav__a\">Прайс-лист</a>
                   </li>
                   <li class=\"main-nav__li\">
                      <a href=\"#\" class=\"main-nav__a\">Контакты</a>
@@ -107,35 +128,38 @@ class __TwigTemplate_9c3e91833de1d2a4e662706ab64a384f271c2617e941c4641beb2b979fa
             </nav>
             <div class=\"header-bottom__lang lang-switcher\">
                <a href=\"";
-        // line 67
+        // line 64
         if ((($context["lang"] ?? null) != "ru")) {
-            echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
+            echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         } else {
             echo "kk";
         }
         echo "\" class=\"lang-switcher__link\">
                   <img 
                      src=\"";
-        // line 69
-        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
+        // line 66
+        echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         echo "assets/img/icons/planet-earth-svgrepo-com (1) 1.svg\" 
                      class=\"lang-switcher__icon\" 
                      alt=\"выбрать язык\"
                   >
                   ";
-        // line 73
+        // line 70
         if ((($context["lang"] ?? null) != "ru")) {
             echo "Русский";
         } else {
             echo "Казакша";
         }
-        // line 74
+        // line 71
         echo "               </a>
             </div>
             <div class=\"header-bottom__callback\">
-               <button class=\"btn btn--yellow\">
+               <a href=\"";
+        // line 74
+        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
+        echo "#callback\" class=\"btn btn--yellow\">
                   Заказать звонок
-               </button>
+               </a>
             </div>
          </div>
       </div>
@@ -155,7 +179,7 @@ class __TwigTemplate_9c3e91833de1d2a4e662706ab64a384f271c2617e941c4641beb2b979fa
 
     public function getDebugInfo()
     {
-        return array (  133 => 74,  127 => 73,  120 => 69,  111 => 67,  69 => 28,  51 => 13,  37 => 1,);
+        return array (  159 => 74,  154 => 71,  148 => 70,  141 => 66,  132 => 64,  121 => 56,  115 => 53,  109 => 50,  103 => 47,  92 => 39,  86 => 36,  72 => 25,  65 => 21,  54 => 13,  49 => 11,  37 => 1,);
     }
 
     public function getSourceContext()

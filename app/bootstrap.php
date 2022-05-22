@@ -4,6 +4,8 @@
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
     $dotenv->load();
 
+    session_start();
+
     require_once 'config/main.php';
 
     require_once 'core/model.php';

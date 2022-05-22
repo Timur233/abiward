@@ -8,9 +8,9 @@
          </div-->
          <div class="main-header__top header-top">
             <div class="header-top__logo logo-block">
-               <a href="/" class="logo-block__link">
+               <a href="{{ base_url }}" class="logo-block__link">
                   <img 
-                     src="{{ base_url }}assets/img/icons/Frame 9.svg" 
+                     src="{{ source_url }}assets/img/icons/Frame 9.svg" 
                      alt="Металлопрокат Алматы - Abiward" 
                      class="logo-block__img"
                   >
@@ -18,14 +18,11 @@
             </div>
             <div class="haeder-top__promo header-promo">
                <h2 class="header-promo__title">
-                  Металлопрокат
-                  <span class="header-promo__title--color">
-                      в Алматы
-                  </span>
+                  {{ settings.site_title }}
                </h2>
                <div class="header-promo__label promo-label">
                   <img 
-                     src="{{ base_url }}assets/img/icons/Frame 10.svg" 
+                     src="{{ source_url }}assets/img/icons/Frame 10.svg" 
                      alt="Delivery Abiward" 
                      class="promo-label__icon"
                   >
@@ -36,27 +33,27 @@
             </div>
             <div class="header-top__contact header-contact">
                <a href="tel:+77714613215" class="header-contact__phone">
-                  +7 771 461 32 15
+                  {{ settings.site_phone }}
                </a>
                <a href="#" class="header-contact__adress">
-                  Алматы, ул. Кабанбай Батыра, 104
+                  {{ settings.site_adres }}
                </a>
             </div>
          </div>
          <div class="main-header__bottom header-bottom">
             <nav class="header-bottom__nav main-nav">
                <ul class="main-nav__list">
-                  <li class="main-nav__li main-nav__li--active">
-                     <a href="#" class="main-nav__a">Главная</a>
+                  <li class="main-nav__li">
+                     <a href="{{ base_url }}" class="main-nav__a">Главная</a>
                   </li>
                   <li class="main-nav__li">
-                     <a href="#" class="main-nav__a">О компании</a>
+                     <a href="{{ base_url }}pages/?id=1" class="main-nav__a">О компании</a>
                   </li>
                   <li class="main-nav__li">
-                     <a href="#" class="main-nav__a">Продукция</a>
+                     <a href="{{ base_url }}catalog" class="main-nav__a">Продукция</a>
                   </li>
                   <li class="main-nav__li">
-                     <a href="#" class="main-nav__a">Прайс-лист</a>
+                     <a href="{{ base_url }}pages/?id=3" class="main-nav__a">Прайс-лист</a>
                   </li>
                   <li class="main-nav__li">
                      <a href="#" class="main-nav__a">Контакты</a>
@@ -64,9 +61,9 @@
                </ul>
             </nav>
             <div class="header-bottom__lang lang-switcher">
-               <a href="{% if lang != 'ru' %}{{ base_url }}{% else %}kk{% endif %}" class="lang-switcher__link">
+               <a href="{% if lang != 'ru' %}{{ source_url }}{% else %}kk{% endif %}" class="lang-switcher__link">
                   <img 
-                     src="{{ base_url }}assets/img/icons/planet-earth-svgrepo-com (1) 1.svg" 
+                     src="{{ source_url }}assets/img/icons/planet-earth-svgrepo-com (1) 1.svg" 
                      class="lang-switcher__icon" 
                      alt="выбрать язык"
                   >
@@ -74,9 +71,9 @@
                </a>
             </div>
             <div class="header-bottom__callback">
-               <button class="btn btn--yellow">
+               <a href="{{ base_url }}#callback" class="btn btn--yellow">
                   Заказать звонок
-               </button>
+               </a>
             </div>
          </div>
       </div>

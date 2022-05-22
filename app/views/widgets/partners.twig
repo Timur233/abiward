@@ -2,56 +2,39 @@
     <div class="container">
         <div class="section__title">
             <h2 class="section-title__h2">
-                Наши партнеры
+                Наши партнеры 
+                {% if is_admin %}
+                    <button class="modal-link" 
+                        data-table="abi_partners"
+                        data-command="INSERT" 
+                        data-fields="image=image"
+                    >
+                        добавить
+                    </button>
+                {% endif %}
             </h2>
         </div>
         <div class="partners-swiper swiper-container">
             <div class="swiper-wrapper">
-                <div 
-                    class="partners-swiper__item swiper-slide"
-                >
-                    <img 
-                        src="{{ base_url }}assets/img/partners/1.svg" 
-                        alt="Title Partner" 
-                        class="partners-swiper__logo"
+                {% for partner in partners %}
+                    <div 
+                        class="partners-swiper__item swiper-slide"
                     >
-                </div>
-                <div 
-                    class="partners-swiper__item swiper-slide"
-                >
-                    <img 
-                        src="{{ base_url }}assets/img/partners/2.svg" 
-                        alt="Title Partner" 
-                        class="partners-swiper__logo"
-                    >
-                </div>
-                <div 
-                    class="partners-swiper__item swiper-slide"
-                >
-                    <img 
-                        src="{{ base_url }}assets/img/partners/3.svg" 
-                        alt="Title Partner" 
-                        class="partners-swiper__logo"
-                    >
-                </div>
-                <div 
-                    class="partners-swiper__item swiper-slide"
-                >
-                    <img 
-                        src="{{ base_url }}assets/img/partners/4.svg" 
-                        alt="Title Partner" 
-                        class="partners-swiper__logo"
-                    >
-                </div>
-                <div 
-                    class="partners-swiper__item swiper-slide"
-                >
-                    <img 
-                        src="{{ base_url }}assets/img/partners/5.svg" 
-                        alt="Title Partner" 
-                        class="partners-swiper__logo"
-                    >
-                </div>
+                        <img 
+                            src="{{ source_url }}uploads/{{ partner.image }}" 
+                            class="partners-swiper__logo"
+                        >
+                        {% if is_admin %}
+                            <button class="modal-link delete-link" 
+                                data-table="abi_partners"
+                                data-command="DELETE" 
+                                data-id="{{ partner.id }}"
+                            >
+                                x
+                            </button>
+                        {% endif %}
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>

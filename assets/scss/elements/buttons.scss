@@ -69,6 +69,17 @@
             border-color: darken($yellow, 12);
         }
     }
+    
+    &--red {
+        border-color: $red;
+        background: $red;
+        color: $white;
+
+        &:hover {
+            background-color: darken($red, 12);
+            border-color: darken($red, 12);
+        }
+    }
 
     &--outline {
         background: none;

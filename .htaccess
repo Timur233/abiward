@@ -1,0 +1,12 @@
+RewriteEngine On
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+RewriteRule ^(.*)$ ./index.php?route=$1
+RewriteCond %{THE_REQUEST} /([^.]+).php [NC]
+
+RewriteEngine On
+RewriteCond %{HTTPS} =off 
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [QSA,L]
+RewriteCond %{THE_REQUEST} /([^.]+).php [NC]

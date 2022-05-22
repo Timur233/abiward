@@ -1,27 +1,25 @@
 <?php
     namespace app\core;
 
+    use app\core\DB;
+
     class Model
     {
-        public function fetch($url, $params = array()) {
+        public function __construct() {
+            $this->db = new DB();
+            $this->lang_postfix = LANG === 'kk' ? '_kk' : '';
+        }
+        
+        public function site_settings() {
+            $result =  $this->db->execute(
+                "SELECT * FROM abi_settings"
+            );
 
-            $ch = curl_init($url . '?token=account-' . SING_TOKEN);
-          
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-                'Content-Type: application/json'
-            ));
-          
-            if (!empty($params)) {
-              curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($params));
+            while($row = $result->fetch_assoc()) {
+                $settings[$row['settings_name']] = $row['settings_value' . $this->lang_postfix];
             }
-          
-            $responce = curl_exec($ch);
-            curl_close($ch);
-          
-            return json_decode($responce, true);
-          
+
+            return $settings;
         }
         
     }

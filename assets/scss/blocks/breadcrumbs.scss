@@ -1,0 +1,10 @@
+.breadcrumbs {
+    padding: 40px 0;
+    background: #f3f3f3;
+
+    &__list {padding: 0;display: flex;margin-top: 0px;margin-bottom: 8px;}
+    &__item > a {color: #f1cc25;}
+    &__item {margin-right: 20px;position: relative;}
+    &__item:not(:last-child):after {content: '-';position: absolute;right: -13px;}
+    &__title {font-size: 34px; margin-bottom: 20px;}
+}

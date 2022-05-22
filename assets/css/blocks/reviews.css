@@ -1,5 +1,6 @@
 .reviews__about-us {
-  font-size: 14px;
+  padding-right: spacer(4);
+  font-size: 16px;
   margin-bottom: 32px; }
 
 .reviews__img {

@@ -42,223 +42,90 @@ class __TwigTemplate_daa9082a834f45ff7e1795507cd731e223ecb96de22dba2bcfaca766031
             </h2>
         </div>
         <div class=\"catalog__list\">
-            <div class=\"catalog__item category-item\">
-                <img 
-                    src=\"";
-        // line 11
-        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "assets/img/cats/1.jpg\" 
-                    alt=\"\" 
-                    class=\"category-item__img\"
-                >
-                <div class=\"category-item__info\">
-                    <h4 class=\"category-item__name\">
-                        Арматура
-                    </h4>
-                    <a href=\"#\" class=\"category-item__link\">
-                        понробнее
-                    </a>
+            ";
+        // line 9
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["catalog"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
+            // line 10
+            echo "                <div class=\"catalog__item category-item\">
+                    <img 
+                        src=\"";
+            // line 12
+            echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
+            echo "uploads/";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "image", [], "any", false, false, false, 12), "html", null, true);
+            echo "\" 
+                        alt=\"\" 
+                        class=\"category-item__img\"
+                    >
+                    <div class=\"category-item__info\">
+                        <h4 class=\"category-item__name\">
+                            ";
+            // line 18
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "title", [], "any", false, false, false, 18), "html", null, true);
+            echo "
+                        </h4>
+                        <a href=\"";
+            // line 20
+            echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
+            echo "catalog?id=";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 20), "html", null, true);
+            echo "\" class=\"category-item__link\">
+                            подробнее
+                        </a>
+                        ";
+            // line 23
+            if (($context["is_admin"] ?? null)) {
+                // line 24
+                echo "                            <br>
+                            <button class=\"category-item__link modal-link delletw-link\"
+                                data-table=\"abi_catalog\"
+                                data-command=\"DELETE\" 
+                                data-id=\"";
+                // line 28
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 28), "html", null, true);
+                echo "\"
+                            >
+                                удалить
+                            </button>
+                            <br>
+                            <button class=\"category-item__link modal-link\" 
+                                data-table=\"abi_catalog\"
+                                data-command=\"UPDATE\" 
+                                data-fields=\"text=title|textarea=content|image=image\" 
+                                data-id=\"";
+                // line 37
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 37), "html", null, true);
+                echo "\"
+                            >
+                                редактировать
+                            </button>
+                        ";
+            }
+            // line 42
+            echo "                    </div>
                 </div>
-            </div>
-            <div class=\"catalog__item category-item\">
-                <img 
-                    src=\"";
-        // line 26
-        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "assets/img/cats/2.jpg\" 
-                    alt=\"\" 
-                    class=\"category-item__img\"
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 45
+        echo "            ";
+        if (($context["is_admin"] ?? null)) {
+            // line 46
+            echo "                <button class=\"btn btn--yellow btn--outline modal-link\" type=\"button\" 
+                    data-table=\"abi_catalog\"
+                    data-command=\"INSERT\" 
+                    data-fields=\"text=title|textarea=content|image=image\"
                 >
-                <div class=\"category-item__info\">
-                    <h4 class=\"category-item__name\">
-                        Круг
-                    </h4>
-                    <a href=\"#\" class=\"category-item__link\">
-                        понробнее
-                    </a>
-                </div>
-            </div>
-            <div class=\"catalog__item category-item\">
-                <img 
-                    src=\"";
-        // line 41
-        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "assets/img/cats/3.jpg\" 
-                    alt=\"\" 
-                    class=\"category-item__img\"
-                >
-                <div class=\"category-item__info\">
-                    <h4 class=\"category-item__name\">
-                        Катанка
-                    </h4>
-                    <a href=\"#\" class=\"category-item__link\">
-                        понробнее
-                    </a>
-                </div>
-            </div>
-            <div class=\"catalog__item category-item\">
-                <img 
-                    src=\"";
-        // line 56
-        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "assets/img/cats/4.jpg\" 
-                    alt=\"\" 
-                    class=\"category-item__img\"
-                >
-                <div class=\"category-item__info\">
-                    <h4 class=\"category-item__name\">
-                        Профильные трубы
-                    </h4>
-                    <a href=\"#\" class=\"category-item__link\">
-                        понробнее
-                    </a>
-                </div>
-            </div>
-            <div class=\"catalog__item category-item\">
-                <img 
-                    src=\"";
-        // line 71
-        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "assets/img/cats/5.jpg\" 
-                    alt=\"\" 
-                    class=\"category-item__img\"
-                >
-                <div class=\"category-item__info\">
-                    <h4 class=\"category-item__name\">
-                        Проволока
-                    </h4>
-                    <a href=\"#\" class=\"category-item__link\">
-                        понробнее
-                    </a>
-                </div>
-            </div>
-            <div class=\"catalog__item category-item\">
-                <img 
-                    src=\"";
-        // line 86
-        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "assets/img/cats/6.jpg\" 
-                    alt=\"\" 
-                    class=\"category-item__img\"
-                >
-                <div class=\"category-item__info\">
-                    <h4 class=\"category-item__name\">
-                        Квадрат
-                    </h4>
-                    <a href=\"#\" class=\"category-item__link\">
-                        понробнее
-                    </a>
-                </div>
-            </div>
-            <div class=\"catalog__item category-item\">
-                <img 
-                    src=\"";
-        // line 101
-        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "assets/img/cats/7.jpg\" 
-                    alt=\"\" 
-                    class=\"category-item__img\"
-                >
-                <div class=\"category-item__info\">
-                    <h4 class=\"category-item__name\">
-                        Профнастил
-                    </h4>
-                    <a href=\"#\" class=\"category-item__link\">
-                        понробнее
-                    </a>
-                </div>
-            </div>
-            <div class=\"catalog__item category-item\">
-                <img 
-                    src=\"";
-        // line 116
-        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "assets/img/cats/8.jpg\" 
-                    alt=\"\" 
-                    class=\"category-item__img\"
-                >
-                <div class=\"category-item__info\">
-                    <h4 class=\"category-item__name\">
-                        Профильные трубы
-                    </h4>
-                    <a href=\"#\" class=\"category-item__link\">
-                        понробнее
-                    </a>
-                </div>
-            </div>
-            <div class=\"catalog__item category-item\">
-                <img 
-                    src=\"";
-        // line 131
-        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "assets/img/cats/9.jpg\" 
-                    alt=\"\" 
-                    class=\"category-item__img\"
-                >
-                <div class=\"category-item__info\">
-                    <h4 class=\"category-item__name\">
-                        Швеллер
-                    </h4>
-                    <a href=\"#\" class=\"category-item__link\">
-                        понробнее
-                    </a>
-                </div>
-            </div>
-            <div class=\"catalog__item category-item\">
-                <img 
-                    src=\"";
-        // line 146
-        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "assets/img/cats/10.jpg\" 
-                    alt=\"\" 
-                    class=\"category-item__img\"
-                >
-                <div class=\"category-item__info\">
-                    <h4 class=\"category-item__name\">
-                        Балки
-                    </h4>
-                    <a href=\"#\" class=\"category-item__link\">
-                        понробнее
-                    </a>
-                </div>
-            </div>
-            <div class=\"catalog__item category-item\">
-                <img 
-                    src=\"";
-        // line 161
-        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "assets/img/cats/11.jpg\" 
-                    alt=\"\" 
-                    class=\"category-item__img\"
-                >
-                <div class=\"category-item__info\">
-                    <h4 class=\"category-item__name\">
-                        Сетка
-                    </h4>
-                    <a href=\"#\" class=\"category-item__link\">
-                        понробнее
-                    </a>
-                </div>
-            </div>
-            <div class=\"catalog__item category-item\">
-                <img 
-                    src=\"";
-        // line 176
-        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "assets/img/cats/12.jpg\" 
-                    alt=\"\" 
-                    class=\"category-item__img\"
-                >
-                <div class=\"category-item__info\">
-                    <h4 class=\"category-item__name\">
-                        Трубы
-                    </h4>
-                    <a href=\"#\" class=\"category-item__link\">
-                        понробнее
-                    </a>
-                </div>
-            </div>
-        </div>
+                    Создать 
+                </button>
+            ";
+        }
+        // line 54
+        echo "        </div>
     </div>
 </section>";
     }
@@ -275,7 +142,7 @@ class __TwigTemplate_daa9082a834f45ff7e1795507cd731e223ecb96de22dba2bcfaca766031
 
     public function getDebugInfo()
     {
-        return array (  247 => 176,  229 => 161,  211 => 146,  193 => 131,  175 => 116,  157 => 101,  139 => 86,  121 => 71,  103 => 56,  85 => 41,  67 => 26,  49 => 11,  37 => 1,);
+        return array (  128 => 54,  118 => 46,  115 => 45,  107 => 42,  99 => 37,  87 => 28,  81 => 24,  79 => 23,  71 => 20,  66 => 18,  55 => 12,  51 => 10,  47 => 9,  37 => 1,);
     }
 
     public function getSourceContext()

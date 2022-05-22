@@ -1,0 +1,35 @@
+<section id="contacts" class="contacts section">
+    <div class="container">
+        <div class="flex">
+            <div class="flex__6 contacts__map">
+                <iframe 
+                    class="map"
+                    src="{{ settings.site_map }}" 
+                    width="100%" 
+                    height="300" 
+                    frameborder="0"></iframe>
+            </div>
+            <div class="flex__6 contacts__data">
+                <div class="section-title">
+                    <h2 class="section-title__h2">Контакты</h2>
+                </div>
+                <div class="contacts__list">
+                    <div class="contacts__item">
+                        <img src="{{ source_url }}assets/img/contact/map.svg">
+                        {{ settings.site_adres }}
+                    </div>
+                    <div class="contacts__item">
+                        <img src="{{ source_url }}assets/img/contact/phone.svg">
+                        <a class="contacts__link" href="tel:{{ settings.site_phone }}">
+                            {{ settings.site_phone }}
+                        </a>
+                    </div>
+                    <div class="contacts__item">
+                        <img src="{{ source_url }}assets/img/contact/insta.svg">
+                        <span class="contacts__link">{{ settings.site_insta }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

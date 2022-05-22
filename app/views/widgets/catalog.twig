@@ -6,186 +6,51 @@
             </h2>
         </div>
         <div class="catalog__list">
-            <div class="catalog__item category-item">
-                <img 
-                    src="{{base_url}}assets/img/cats/1.jpg" 
-                    alt="" 
-                    class="category-item__img"
-                >
-                <div class="category-item__info">
-                    <h4 class="category-item__name">
-                        Арматура
-                    </h4>
-                    <a href="#" class="category-item__link">
-                        понробнее
-                    </a>
+            {% for item in catalog %}
+                <div class="catalog__item category-item">
+                    <img 
+                        src="{{ source_url }}uploads/{{ item.image }}" 
+                        alt="" 
+                        class="category-item__img"
+                    >
+                    <div class="category-item__info">
+                        <h4 class="category-item__name">
+                            {{ item.title }}
+                        </h4>
+                        <a href="{{base_url}}catalog?id={{ item.id }}" class="category-item__link">
+                            подробнее
+                        </a>
+                        {% if is_admin %}
+                            <br>
+                            <button class="category-item__link modal-link delletw-link"
+                                data-table="abi_catalog"
+                                data-command="DELETE" 
+                                data-id="{{ item.id }}"
+                            >
+                                удалить
+                            </button>
+                            <br>
+                            <button class="category-item__link modal-link" 
+                                data-table="abi_catalog"
+                                data-command="UPDATE" 
+                                data-fields="text=title|textarea=content|image=image" 
+                                data-id="{{ item.id }}"
+                            >
+                                редактировать
+                            </button>
+                        {% endif %}
+                    </div>
                 </div>
-            </div>
-            <div class="catalog__item category-item">
-                <img 
-                    src="{{base_url}}assets/img/cats/2.jpg" 
-                    alt="" 
-                    class="category-item__img"
+            {% endfor %}
+            {% if is_admin %}
+                <button class="btn btn--yellow btn--outline modal-link" type="button" 
+                    data-table="abi_catalog"
+                    data-command="INSERT" 
+                    data-fields="text=title|textarea=content|image=image"
                 >
-                <div class="category-item__info">
-                    <h4 class="category-item__name">
-                        Круг
-                    </h4>
-                    <a href="#" class="category-item__link">
-                        понробнее
-                    </a>
-                </div>
-            </div>
-            <div class="catalog__item category-item">
-                <img 
-                    src="{{base_url}}assets/img/cats/3.jpg" 
-                    alt="" 
-                    class="category-item__img"
-                >
-                <div class="category-item__info">
-                    <h4 class="category-item__name">
-                        Катанка
-                    </h4>
-                    <a href="#" class="category-item__link">
-                        понробнее
-                    </a>
-                </div>
-            </div>
-            <div class="catalog__item category-item">
-                <img 
-                    src="{{base_url}}assets/img/cats/4.jpg" 
-                    alt="" 
-                    class="category-item__img"
-                >
-                <div class="category-item__info">
-                    <h4 class="category-item__name">
-                        Профильные трубы
-                    </h4>
-                    <a href="#" class="category-item__link">
-                        понробнее
-                    </a>
-                </div>
-            </div>
-            <div class="catalog__item category-item">
-                <img 
-                    src="{{base_url}}assets/img/cats/5.jpg" 
-                    alt="" 
-                    class="category-item__img"
-                >
-                <div class="category-item__info">
-                    <h4 class="category-item__name">
-                        Проволока
-                    </h4>
-                    <a href="#" class="category-item__link">
-                        понробнее
-                    </a>
-                </div>
-            </div>
-            <div class="catalog__item category-item">
-                <img 
-                    src="{{base_url}}assets/img/cats/6.jpg" 
-                    alt="" 
-                    class="category-item__img"
-                >
-                <div class="category-item__info">
-                    <h4 class="category-item__name">
-                        Квадрат
-                    </h4>
-                    <a href="#" class="category-item__link">
-                        понробнее
-                    </a>
-                </div>
-            </div>
-            <div class="catalog__item category-item">
-                <img 
-                    src="{{base_url}}assets/img/cats/7.jpg" 
-                    alt="" 
-                    class="category-item__img"
-                >
-                <div class="category-item__info">
-                    <h4 class="category-item__name">
-                        Профнастил
-                    </h4>
-                    <a href="#" class="category-item__link">
-                        понробнее
-                    </a>
-                </div>
-            </div>
-            <div class="catalog__item category-item">
-                <img 
-                    src="{{base_url}}assets/img/cats/8.jpg" 
-                    alt="" 
-                    class="category-item__img"
-                >
-                <div class="category-item__info">
-                    <h4 class="category-item__name">
-                        Профильные трубы
-                    </h4>
-                    <a href="#" class="category-item__link">
-                        понробнее
-                    </a>
-                </div>
-            </div>
-            <div class="catalog__item category-item">
-                <img 
-                    src="{{base_url}}assets/img/cats/9.jpg" 
-                    alt="" 
-                    class="category-item__img"
-                >
-                <div class="category-item__info">
-                    <h4 class="category-item__name">
-                        Швеллер
-                    </h4>
-                    <a href="#" class="category-item__link">
-                        понробнее
-                    </a>
-                </div>
-            </div>
-            <div class="catalog__item category-item">
-                <img 
-                    src="{{base_url}}assets/img/cats/10.jpg" 
-                    alt="" 
-                    class="category-item__img"
-                >
-                <div class="category-item__info">
-                    <h4 class="category-item__name">
-                        Балки
-                    </h4>
-                    <a href="#" class="category-item__link">
-                        понробнее
-                    </a>
-                </div>
-            </div>
-            <div class="catalog__item category-item">
-                <img 
-                    src="{{base_url}}assets/img/cats/11.jpg" 
-                    alt="" 
-                    class="category-item__img"
-                >
-                <div class="category-item__info">
-                    <h4 class="category-item__name">
-                        Сетка
-                    </h4>
-                    <a href="#" class="category-item__link">
-                        понробнее
-                    </a>
-                </div>
-            </div>
-            <div class="catalog__item category-item">
-                <img 
-                    src="{{base_url}}assets/img/cats/12.jpg" 
-                    alt="" 
-                    class="category-item__img"
-                >
-                <div class="category-item__info">
-                    <h4 class="category-item__name">
-                        Трубы
-                    </h4>
-                    <a href="#" class="category-item__link">
-                        понробнее
-                    </a>
-                </div>
-            </div>
+                    Создать 
+                </button>
+            {% endif %}
         </div>
     </div>
 </section>

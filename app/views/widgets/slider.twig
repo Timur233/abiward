@@ -3,34 +3,49 @@
         <div class="container">
             <div class="main-slider-swiper swiper-container">
                 <div class="swiper-wrapper">
-                    <div 
-                        class="main-slider-swiper__item slider-item swiper-slide"
-                        style="background-image: url({{base_url}}assets/img/slider/main-slider-1.jpg);"
-                    >
-                        <div class="slider-item__content">
-                            <h3 class="slider-item__title">
-                                Поставки металлопроката в любых объемах
-                            </h3>
-                            <a href="#" class="btn btn--yellow">
-                                Заказать звонок
-                            </a>
+                    {% for item in slider %}
+                        <div 
+                            class="main-slider-swiper__item slider-item swiper-slide"
+                            style="background-image: url('{{source_url}}uploads/{{ item.image }}');"
+                        >
+                            <div class="slider-item__content">
+                                {{ item.content|raw }}
+                                {% if is_admin %}
+                                    <button class="modal-link" 
+                                        data-table="abi_slider"
+                                        data-command="UPDATE" 
+                                        data-fields="textarea=content|image=image"
+                                        data-id="{{ item.id }}"
+                                    >
+                                        редактировать
+                                    </button>
+                                {% endif %}
+                            </div>
+
+                            {% if is_admin %}
+                                <button class="modal-link delete-link" 
+                                    data-table="abi_slider"
+                                    data-command="DELETE" 
+                                    data-id="{{ item.id }}"
+                                >
+                                    x
+                                </button>
+                            {% endif %}
+
                         </div>
-                    </div>
-                    <div 
-                        class="main-slider-swiper__item slider-item swiper-slide"
-                        style="background-image: url({{base_url}}assets/img/slider/main-slider-2.jpg);"
-                    >
-                        <div class="slider-item__content">
-                            <h3 class="slider-item__title slider-item__title--white">
-                                Широкий ассортимент <span class="slider-item__title--yellow">продукции</span>
-                            </h3>
-                            <a href="#" class="btn btn--yellow">
-                                Продукция
-                            </a>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
+            {% if is_admin %}
+                <br>
+                <button class="modal-link" 
+                    data-table="abi_slider"
+                    data-command="INSERT" 
+                    data-fields="textarea=content|image=image"
+                >
+                    + добавить
+                </button>
+            {% endif %}
         </div>
     </div>
 </section>

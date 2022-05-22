@@ -1,40 +1,40 @@
-<section id="callback" class="callback-h section" style="background-image: url('https://cms.abpx.kz/storage/uploads/2022/02/16/620c95975bf026202c963dfdb75--.jpg');">
+<section id="callback" class="callback callback__section section" style="background-image: url('http://localhost/abiward//assets/img/callback/bg.jpeg');">
    <div class="container">
       <div class="section-title">
-         <h2 class="section-title__h2">Оставить заявку</h2>
+         <h2 class="section-title__h2 callback__title">Оставить заявку</h2>
       </div>
-      <form class="callback-h__form" action="#">
+      <form class="callback__form" action="#">
          <div class="flex">
 
-            <div class="input-group callback-h__group flex__5">
+            <div class="input-group callback__group flex__4">
                <input 
                   type="text" 
                   class="input-group__input" 
                   id="staticTopFormName" 
                   name="name" 
-                  placeholder="{{ translate['name'] }}" 
+                  placeholder="Телефон" 
                   fieldname="Имя"
                >
             </div>
 
-            <div class="input-group callback-h__group flex__5">
+            <div class="input-group callback__group flex__4">
                <input 
                   type="text" 
                   class="input-group__input" 
                   id="staticTopFormPhone" 
                   name="phone" 
-                  placeholder="{{ translate['phone'] }}" 
+                  placeholder="Телефон" 
                   fieldname="Телефон" 
                   required="required"
                >
             </div>
 
-            <div class="input-group callback-h__group flex__2">
+            <div class="input-group callback__group flex__4">
                <button 
-                  class="btn btn--gradient send-form-button callback-h__btn" 
+                  class="btn btn--yellow send-form-button callback__btn" 
                   onclick="frontend.form(this); return false"
                >
-                  {{ translate['call_back_me'] }}
+                  Оставить заявку
                </button>
             </div>
 

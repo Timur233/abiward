@@ -37,14 +37,39 @@
         width: calc(100% / 3);
     }
 
+    &__6 {
+        flex: 0 0 auto;
+        width: calc(calc(100%/12)*6);
+    }
+
     &__5 {
         flex: 0 0 auto;
         width: calc(calc(100%/12)*5);
     }
 
+    &__4 {
+        flex: 0 0 auto;
+        width: calc(calc(100%/12)*4);
+    }
+
     &__2 {
         flex: 0 0 auto;
         width: calc(calc(100%/12)*2);
+    }
+
+    &__3 {
+        flex: 0 0 auto;
+        width: calc(calc(100%/12)*3);
+    }
+
+    &__9 {
+        flex: 0 0 auto;
+        width: calc(calc(100%/12)*9);
+    }
+
+    &__12 {
+        flex: 0 0 auto;
+        width: calc(calc(100%/12)*12);
     }
 
     &--v-center {

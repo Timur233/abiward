@@ -1,0 +1,58 @@
+{{ include('widgets/_header.twig') }}
+
+{{ include('widgets/breadcrumbs.twig') }}
+
+<section class="section auth">
+    <div class="container">
+        <div class="site-settings">
+            <form action="{{ base_url }}admin/save" method="POST">
+                <h2>Основные настройки</h2><br>
+                <div class="flex">
+
+                    <div class="flex__4 input-group site-settings__group">
+                        <label for="site-title">Название сайта:</label>
+                        <input type="text" id="site-title" name="site_title" class="input-group__input"
+                            value="{{ settings.site_title }}">
+                    </div>
+
+                    <div class="flex__4 input-group site-settings__group">
+                        <label for="site-phone">Телефон:</label>
+                        <input type="text" id="site-phone" name="site_phone" class="input-group__input"
+                            value="{{ settings.site_phone }}">
+                    </div>
+
+                    <div class="flex__4 input-group site-settings__group">
+                        <label for="site-adres">Адрес:</label>
+                        <input type="text" id="site-adres" name="site_adres" class="input-group__input"
+                            value="{{ settings.site_adres }}">
+                    </div>
+
+                    <div class="flex__4 input-group site-settings__group">
+                        <label for="site-insta">Инстаграм:</label>
+                        <input type="text" id="site-insta" name="site_insta" class="input-group__input"
+                            value="{{ settings.site_insta }}">
+                    </div>
+
+                    <div class="flex__4 input-group site-settings__group">
+                        <label for="site-map">Сылка на карту:</label>
+                        <input type="text" id="site-map" name="site_map" class="input-group__input"
+                            value="{{ settings.site_map }}">
+                    </div>
+
+                    <div class="flex__4 input-group site-settings__group">
+                        <label for="site-copyright">Копирайт:</label>
+                        <input type="text" id="site-copyright" name="site_copyright" class="input-group__input"
+                            value="{{ settings.site_copyright }}">
+                    </div>
+
+                    <div class="flex__12 site-settings__group">
+                        <button type="submit" class="btn btn--yellow">Сохранить</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+{{ include('widgets/_footer.twig') }}

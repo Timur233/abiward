@@ -1,0 +1,31 @@
+{{ include('widgets/_header.twig') }}
+
+{{ include('widgets/breadcrumbs.twig') }}
+
+<section class="pages section">
+    <div class="container">
+        <div class="flex">
+            <div class="flex__12 apges__content main-content">
+
+                {% if is_admin %}
+                    <button class="btn btn--yellow btn--outline modal-link" type="button" 
+                        data-table="abi_pages"
+                        data-command="UPDATE" 
+                        data-fields="text=title|textarea=content"
+                        data-id="{{ id }}"
+                        style="margin-bottom: 20px"
+                    >
+                        Редактировать 
+                    </button>
+                {% endif %}
+
+                {{ content|raw }}
+
+                {{ include('widgets/catalog_callback.twig') }}
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ include('widgets/_footer.twig') }}

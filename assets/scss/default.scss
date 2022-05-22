@@ -1,7 +1,7 @@
 body {
     overflow-x: hidden;
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.4;
     color: $text;
 
@@ -11,7 +11,7 @@ body {
 }
 
 .section {
-    padding: spacer(25) 0 0 0;
+    padding: spacer(16) 0 0 0;
 
     &--gray {
         background-color: $bg-gray;
@@ -60,3 +60,76 @@ body {
         text-decoration: underline;
     }
 } 
+
+.main-content {
+    // font-size: 14px;
+
+    & ul {
+        list-style-type: disc;
+        padding-left: 40px;
+    }
+
+    & ol {
+        list-style-type: auto;
+        padding-left: 40px;
+    }
+
+    & h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 20px;
+    }
+
+    & img {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+p {
+    margin-bottom: 24px;
+}
+
+ul {
+    margin: 24px 0;
+}
+
+li {margin-bottom: 8px;}
+
+table {
+	width: 100%;
+	margin-bottom: 24px;
+	font-size: 15px;
+	background: #fff!important;
+    border: 1px solid #d8d8d8;
+    overflow: auto;
+}
+table th {
+	font-weight: bold;
+	padding: 12px;
+    background: #f7d22d;
+	border: none;
+	text-align: left;
+	font-size: 15px;
+}
+table td {
+	padding: 12px;
+	border: none;
+	border-top: 3px solid #fff;
+	font-size: 15px;
+}
+table tbody tr:nth-child(even){
+	background: #f8f8f8!important;
+}
+
+.modal-link {
+    color: #F75E2D;
+    text-decoration: underline;
+    background: none;
+    cursor: pointer;
+}
+
+.delete-link {color: #fff;background: #F75E2D;width: 25px;height: 25px;display: inline-block;position: absolute;right: 10px;top: 10px;text-align: center;text-decoration: none;line-height: 1.5;border-radius: 50%;}
+
+.select {
+    padding: 8px 12px;
+    border-radius: 4px;
+}

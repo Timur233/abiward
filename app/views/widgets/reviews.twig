@@ -4,31 +4,63 @@
             <div class="flex__1-2">
                 <div class="section__title">
                     <h2 class="section-title__h2">
-                        Нас выбирают
+                        {{ why_are_we.title }}
+                        {% if is_admin %}
+                            <button class="modal-link" 
+                                data-table="abi_pages"
+                                data-command="UPDATE" 
+                                data-fields="text=title|textarea=content"
+                                data-id="{{ why_are_we.id }}"
+                            >
+                                редактировать
+                            </button>
+                        {% endif %}
                     </h2>
                 </div>
                 <div class="reviews__about-us">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.</p>
-                    <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
+                    {{ why_are_we.content|raw }}
                 </div>
-                <a href="#" class="btn btn--outline">
-                    Читать далее
-                </a>
             </div>
             <div class="flex__1-2">
                 <div class="reviews-swiper swiper-container">
                     <div class="swiper-wrapper">
-                        <div 
-                            class="reviews-swiper__item swiper-slide"
-                        >
-                            <a href="#" class="reviews__link">
-                                <img 
-                                    class="reviews__img"
-                                    src="{{ base_url }}assets/img/review.jpg" 
-                                    alt=""
+                        {% if is_admin %}
+                            <div 
+                                class="reviews-swiper__item swiper-slide" style="height: 100%;"
+                            >
+                                <button class="btn btn--yellow btn--outline modal-link" type="button" 
+                                    data-table="abi_reviews"
+                                    data-command="INSERT" 
+                                    data-fields="image=image"
+                                    style="width: 100%; height: 100%"
                                 >
-                            </a>
-                        </div>
+                                    + Создать 
+                                </button>
+                            </div>
+                        {% endif %}
+                        {% for item in reviews %}
+                            <div 
+                                class="reviews-swiper__item swiper-slide"
+                            >
+                                <a href="{{ base_url }}uploads/{{ item.image }}" 
+                                   class="reviews__link" data-fslightbox="first-lightbox">
+                                    <img 
+                                        class="reviews__img"
+                                        src="{{ base_url }}uploads/{{ item.image }}" 
+                                        alt=""
+                                    >
+                                </a>
+                                {% if is_admin %}
+                                    <button class="modal-link delete-link" 
+                                        data-table="abi_reviews"
+                                        data-command="DELETE" 
+                                        data-id="{{ item.id }}"
+                                    >
+                                        x
+                                    </button>
+                                {% endif %}
+                            </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
