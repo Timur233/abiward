@@ -28,11 +28,19 @@
   
     <script>
         function mainSlider() {
+
+        const config = {
+            slides: 2,
+        }
+
+        if (window.outerWidth <= 768) {
+            config.slides = 1;
+        }
   
-          var slider = new Swiper('.main-slider-swiper', {
+        var slider = new Swiper('.main-slider-swiper', {
             effect: null,
             loop: true,
-            slidesPerView: 2,
+            slidesPerView: config.slides,
             preventClicks: true,
             preventClicksPropagation: false,
             lazyLoadingInPrevNext: true,
@@ -41,18 +49,26 @@
                 nextEl: ".swiper-button-next.building-steps__controll",
                 prevEl: ".swiper-button-prev.building-steps__controll",
             },
-          });
+        });
   
         }
   
         mainSlider();
   
         function partnersSlider() {
+
+        const config = {
+            slides: 5,
+        }
+
+        if (window.outerWidth <= 1000) {
+            config.slides = 4;
+        }
   
         var slider = new Swiper('.partners-swiper', {
           effect: null,
           loop: true,
-          slidesPerView: 5,
+          slidesPerView: config.slides,
           preventClicks: true,
           preventClicksPropagation: false,
           lazyLoadingInPrevNext: true,
@@ -68,11 +84,23 @@
         partnersSlider();
   
         function reviewsSlider() {
-  
+
+        const config = {
+            slides: 3,
+        }
+
+        if (window.outerWidth <= 1000) {
+            config.slides = 2;
+        }
+
+        if (window.outerWidth <= 768) {
+            config.slides = 1;
+        }
+        
         var slider = new Swiper('.reviews-swiper', {
           effect: null,
           loop: false,
-          slidesPerView: 3,
+          slidesPerView: config.slides,
           preventClicks: true,
           preventClicksPropagation: false,
           lazyLoadingInPrevNext: true,
@@ -87,6 +115,33 @@
         }
   
         reviewsSlider();
+
+        function mainCatalogSwiper() {
+
+        const config = {
+            slides: 5,
+        }
+
+        if (window.outerWidth <= 1000) {
+            config.slides = 4;
+        }
+
+        var slider = new Swiper('.main-catalog-list', {
+        effect: null,
+        loop: true,
+        slidesPerView: config.slides,
+        preventClicks: true,
+        preventClicksPropagation: false,
+        lazyLoadingInPrevNext: true,
+        spaceBetween: 40,
+        });
+
+        }
+
+        if (window.outerWidth <= 768) {
+            mainCatalogSwiper();
+        }
+
     </script>
   
   </html>
