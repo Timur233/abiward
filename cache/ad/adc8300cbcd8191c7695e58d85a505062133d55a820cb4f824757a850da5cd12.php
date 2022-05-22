@@ -139,8 +139,10 @@ class __TwigTemplate_9c3e91833de1d2a4e662706ab64a384f271c2617e941c4641beb2b979fa
         echo "</a>
                   </li>
                   <li class=\"main-nav__li\">
-                     <a href=\"#\" class=\"main-nav__a\">";
+                     <a href=\"";
         // line 59
+        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
+        echo "contacts\" class=\"main-nav__a\">";
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["translate"] ?? null), "menu_contacts", [], "any", false, false, false, 59), "html", null, true);
         echo "</a>
                   </li>
@@ -201,7 +203,7 @@ class __TwigTemplate_9c3e91833de1d2a4e662706ab64a384f271c2617e941c4641beb2b979fa
 
     public function getDebugInfo()
     {
-        return array (  182 => 74,  178 => 73,  173 => 70,  167 => 69,  161 => 66,  152 => 64,  144 => 59,  136 => 56,  128 => 53,  120 => 50,  112 => 47,  101 => 39,  95 => 36,  87 => 31,  82 => 29,  75 => 25,  68 => 21,  58 => 14,  54 => 13,  49 => 11,  37 => 1,);
+        return array (  184 => 74,  180 => 73,  175 => 70,  169 => 69,  163 => 66,  154 => 64,  144 => 59,  136 => 56,  128 => 53,  120 => 50,  112 => 47,  101 => 39,  95 => 36,  87 => 31,  82 => 29,  75 => 25,  68 => 21,  58 => 14,  54 => 13,  49 => 11,  37 => 1,);
     }
 
     public function getSourceContext()
