@@ -11,7 +11,7 @@
                <a href="{{ base_url }}" class="logo-block__link">
                   <img 
                      src="{{ source_url }}assets/img/icons/Frame 9.svg" 
-                     alt="Металлопрокат Алматы - Abiward" 
+                     alt="{{ settings.copyright }}" 
                      class="logo-block__img"
                   >
                </a>
@@ -26,9 +26,9 @@
                      alt="Delivery Abiward" 
                      class="promo-label__icon"
                   >
-                  <span>По городу работает Доставка!</span>
+                  <span>{{ translate.delivery }}</span>
                   <span class="promo-label__dot"></span>
-                  <span>в течении дня</span>
+                  <span>{{ translate.delivery_line }}</span>
                </div>
             </div>
             <div class="header-top__contact header-contact">
@@ -44,19 +44,19 @@
             <nav class="header-bottom__nav main-nav">
                <ul class="main-nav__list">
                   <li class="main-nav__li">
-                     <a href="{{ base_url }}" class="main-nav__a">Главная</a>
+                     <a href="{{ base_url }}" class="main-nav__a">{{ translate.menu_main }}</a>
                   </li>
                   <li class="main-nav__li">
-                     <a href="{{ base_url }}pages/?id=1" class="main-nav__a">О компании</a>
+                     <a href="{{ base_url }}pages/?id=1" class="main-nav__a">{{ translate.menu_about }}</a>
                   </li>
                   <li class="main-nav__li">
-                     <a href="{{ base_url }}catalog" class="main-nav__a">Продукция</a>
+                     <a href="{{ base_url }}catalog" class="main-nav__a">{{ translate.menu_products }}</a>
                   </li>
                   <li class="main-nav__li">
-                     <a href="{{ base_url }}pages/?id=3" class="main-nav__a">Прайс-лист</a>
+                     <a href="{{ base_url }}pages/?id=3" class="main-nav__a">{{ translate.menu_price }}</a>
                   </li>
                   <li class="main-nav__li">
-                     <a href="#" class="main-nav__a">Контакты</a>
+                     <a href="#" class="main-nav__a">{{ translate.menu_contacts }}</a>
                   </li>
                </ul>
             </nav>
@@ -64,15 +64,14 @@
                <a href="{% if lang != 'ru' %}{{ source_url }}{% else %}kk{% endif %}" class="lang-switcher__link">
                   <img 
                      src="{{ source_url }}assets/img/icons/planet-earth-svgrepo-com (1) 1.svg" 
-                     class="lang-switcher__icon" 
-                     alt="выбрать язык"
+                     class="lang-switcher__icon"
                   >
                   {% if lang != 'ru' %}Русский{% else %}Казакша{% endif %}
                </a>
             </div>
             <div class="header-bottom__callback">
                <a href="{{ base_url }}#callback" class="btn btn--yellow">
-                  Заказать звонок
+                  {{ translate.callback }}
                </a>
             </div>
          </div>

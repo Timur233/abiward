@@ -1,20 +1,20 @@
 <div class="main-catalog__callback catalog-callback">
     <div class="section-title">
-        <h2 class="section-title__h2">Оставить заявку</h2>
+        <h2 class="section-title__h2">{{ translate.callback_app }}</h2>
     </div>
     <form class="callback__form" action="#">
         <div class="flex">
            <div class="input-group callback__group flex__4">
-              <input type="text" class="input-group__input" id="staticTopFormName" name="name" placeholder="Имя" fieldname="Имя">
+              <input type="text" class="input-group__input" id="staticTopFormName" name="name" placeholder="{{ translate.name }}" fieldname="{{ translate.name }}">
            </div>
 
            <div class="input-group callback__group flex__4">
-              <input type="text" class="input-group__input" id="staticTopFormPhone" name="phone" placeholder="Телефон" fieldname="Телефон" required="required">
+              <input type="text" class="input-group__input" id="staticTopFormPhone" name="phone" placeholder="{{ translate.phone }}" fieldname="{{ translate.phone }}" required="required">
            </div>
 
            <div class="input-group callback__group flex__4">
               <button class="btn btn--yellow send-form-button callback__btn" onclick="frontend.form(this); return false" style="width: 100%">
-                 Позвоните мне
+                {{ translate.callback_app }}
               </button>
            </div>
 

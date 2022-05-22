@@ -9,11 +9,11 @@
         <div class="login-form">
             <form action="{{ source_url }}admin/login" method="POST">
                 <div class="login-form__block input-group">
-                    <label for="user-login">Логин</label>
+                    <label for="user-login">{{ translate.login }}</label>
                     <input id="user-login" class="input-group__input" required type="text" name="login">
                 </div>
                 <div class="login-form__block input-group">
-                    <label for="user-pass">Пароль</label>
+                    <label for="user-pass">{{ translate.password }}</label>
                     <input id="user-pass" class="input-group__input" required type="password" name="password">
                 </div>
                 {% if message %}
@@ -24,7 +24,7 @@
                     </div>
                 {% endif %}
                 <div class="login-form__block">
-                    <button type="submit" class="btn btn--yellow">Подтвердить</button>
+                    <button type="submit" class="btn btn--yellow">{{ translate.confirm }}</button>
                 </div>
             </form>
         </div>

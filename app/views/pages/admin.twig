@@ -6,47 +6,55 @@
     <div class="container">
         <div class="site-settings">
             <form action="{{ base_url }}admin/save" method="POST">
-                <h2>Основные настройки</h2><br>
+                <h2>{{ translate.main_settings }}</h2><br>
                 <div class="flex">
 
                     <div class="flex__4 input-group site-settings__group">
-                        <label for="site-title">Название сайта:</label>
+                        <label for="site-title">{{ translate.site_title }}</label>
                         <input type="text" id="site-title" name="site_title" class="input-group__input"
                             value="{{ settings.site_title }}">
                     </div>
 
                     <div class="flex__4 input-group site-settings__group">
-                        <label for="site-phone">Телефон:</label>
+                        <label for="site-phone">{{ translate.site_phone }}</label>
                         <input type="text" id="site-phone" name="site_phone" class="input-group__input"
                             value="{{ settings.site_phone }}">
                     </div>
 
                     <div class="flex__4 input-group site-settings__group">
-                        <label for="site-adres">Адрес:</label>
+                        <label for="site-adres">{{ translate.site_adres }}</label>
                         <input type="text" id="site-adres" name="site_adres" class="input-group__input"
                             value="{{ settings.site_adres }}">
                     </div>
 
                     <div class="flex__4 input-group site-settings__group">
-                        <label for="site-insta">Инстаграм:</label>
+                        <label for="site-insta">{{ translate.site_insta }}</label>
                         <input type="text" id="site-insta" name="site_insta" class="input-group__input"
                             value="{{ settings.site_insta }}">
                     </div>
 
                     <div class="flex__4 input-group site-settings__group">
-                        <label for="site-map">Сылка на карту:</label>
+                        <label for="site-map">{{ translate.site_map }}</label>
                         <input type="text" id="site-map" name="site_map" class="input-group__input"
                             value="{{ settings.site_map }}">
                     </div>
 
                     <div class="flex__4 input-group site-settings__group">
-                        <label for="site-copyright">Копирайт:</label>
+                        <label for="site-copyright">{{ translate.site_copyright }}</label>
                         <input type="text" id="site-copyright" name="site_copyright" class="input-group__input"
                             value="{{ settings.site_copyright }}">
                     </div>
 
+                    <div class="flex__12 input-group" style="margin-bottom: 20px">
+                        <label for="site-translater">{{ translate.site_translater }}</label>
+                        <textarea type="text" id="site-translater" name="site_translater" 
+                            class="input-group__input" style="height: 400px;">{{ settings.site_translater }}</textarea>
+                    </div>
+
                     <div class="flex__12 site-settings__group">
-                        <button type="submit" class="btn btn--yellow">Сохранить</button>
+                        <button type="submit" class="btn btn--yellow">
+                            {{ translate.save }}
+                        </button>
                     </div>
 
                 </div>

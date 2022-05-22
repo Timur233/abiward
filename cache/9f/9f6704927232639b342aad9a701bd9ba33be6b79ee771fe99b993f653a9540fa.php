@@ -72,7 +72,10 @@ class __TwigTemplate_441041c46b336091de425aaedd8f935802b4e1214d81efc04da4d23404d
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 18), "html", null, true);
                 echo "\"
                                     >
-                                        редактировать
+                                        ";
+                // line 20
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["translate"] ?? null), "edit", [], "any", false, false, false, 20), "html", null, true);
+                echo "
                                     </button>
                                 ";
             }
@@ -116,7 +119,10 @@ class __TwigTemplate_441041c46b336091de425aaedd8f935802b4e1214d81efc04da4d23404d
                     data-command=\"INSERT\" 
                     data-fields=\"textarea=content|image=image\"
                 >
-                    + добавить
+                    + ";
+            // line 46
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["translate"] ?? null), "add", [], "any", false, false, false, 46), "html", null, true);
+            echo "
                 </button>
             ";
         }
@@ -138,7 +144,7 @@ class __TwigTemplate_441041c46b336091de425aaedd8f935802b4e1214d81efc04da4d23404d
 
     public function getDebugInfo()
     {
-        return array (  124 => 49,  113 => 40,  111 => 39,  107 => 37,  99 => 34,  91 => 29,  86 => 26,  84 => 25,  80 => 23,  72 => 18,  66 => 14,  64 => 13,  60 => 12,  52 => 9,  48 => 7,  44 => 6,  37 => 1,);
+        return array (  130 => 49,  124 => 46,  116 => 40,  114 => 39,  110 => 37,  102 => 34,  94 => 29,  89 => 26,  87 => 25,  83 => 23,  77 => 20,  72 => 18,  66 => 14,  64 => 13,  60 => 12,  52 => 9,  48 => 7,  44 => 6,  37 => 1,);
     }
 
     public function getSourceContext()

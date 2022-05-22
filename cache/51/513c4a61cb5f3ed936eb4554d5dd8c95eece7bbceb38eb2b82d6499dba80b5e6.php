@@ -38,7 +38,10 @@ class __TwigTemplate_daa9082a834f45ff7e1795507cd731e223ecb96de22dba2bcfaca766031
     <div class=\"container\">
         <div class=\"section__title\">
             <h2 class=\"section-title__h2\">
-                Наша продукция:
+                ";
+        // line 5
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["translate"] ?? null), "our_products", [], "any", false, false, false, 5), "html", null, true);
+        echo "
             </h2>
         </div>
         <div class=\"catalog__list\">
@@ -72,7 +75,10 @@ class __TwigTemplate_daa9082a834f45ff7e1795507cd731e223ecb96de22dba2bcfaca766031
             echo "catalog?id=";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 20), "html", null, true);
             echo "\" class=\"category-item__link\">
-                            подробнее
+                            ";
+            // line 21
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["translate"] ?? null), "more", [], "any", false, false, false, 21), "html", null, true);
+            echo "
                         </a>
                         ";
             // line 23
@@ -86,8 +92,12 @@ class __TwigTemplate_daa9082a834f45ff7e1795507cd731e223ecb96de22dba2bcfaca766031
                 // line 28
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 28), "html", null, true);
                 echo "\"
+                                style=\"text-transform: lower-case\"
                             >
-                                удалить
+                                ";
+                // line 31
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["translate"] ?? null), "delete", [], "any", false, false, false, 31), "html", null, true);
+                echo "
                             </button>
                             <br>
                             <button class=\"category-item__link modal-link\" 
@@ -95,15 +105,19 @@ class __TwigTemplate_daa9082a834f45ff7e1795507cd731e223ecb96de22dba2bcfaca766031
                                 data-command=\"UPDATE\" 
                                 data-fields=\"text=title|textarea=content|image=image\" 
                                 data-id=\"";
-                // line 37
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 37), "html", null, true);
+                // line 38
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 38), "html", null, true);
                 echo "\"
+                                style=\"text-transform: lower-case\"
                             >
-                                редактировать
+                                ";
+                // line 41
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["translate"] ?? null), "edit", [], "any", false, false, false, 41), "html", null, true);
+                echo "
                             </button>
                         ";
             }
-            // line 42
+            // line 44
             echo "                    </div>
                 </div>
             ";
@@ -111,20 +125,23 @@ class __TwigTemplate_daa9082a834f45ff7e1795507cd731e223ecb96de22dba2bcfaca766031
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 45
+        // line 47
         echo "            ";
         if (($context["is_admin"] ?? null)) {
-            // line 46
+            // line 48
             echo "                <button class=\"btn btn--yellow btn--outline modal-link\" type=\"button\" 
                     data-table=\"abi_catalog\"
                     data-command=\"INSERT\" 
                     data-fields=\"text=title|textarea=content|image=image\"
                 >
-                    Создать 
+                    ";
+            // line 53
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["translate"] ?? null), "create", [], "any", false, false, false, 53), "html", null, true);
+            echo " 
                 </button>
             ";
         }
-        // line 54
+        // line 56
         echo "        </div>
     </div>
 </section>";
@@ -142,7 +159,7 @@ class __TwigTemplate_daa9082a834f45ff7e1795507cd731e223ecb96de22dba2bcfaca766031
 
     public function getDebugInfo()
     {
-        return array (  128 => 54,  118 => 46,  115 => 45,  107 => 42,  99 => 37,  87 => 28,  81 => 24,  79 => 23,  71 => 20,  66 => 18,  55 => 12,  51 => 10,  47 => 9,  37 => 1,);
+        return array (  145 => 56,  139 => 53,  132 => 48,  129 => 47,  121 => 44,  115 => 41,  109 => 38,  99 => 31,  93 => 28,  87 => 24,  85 => 23,  80 => 21,  74 => 20,  69 => 18,  58 => 12,  54 => 10,  50 => 9,  43 => 5,  37 => 1,);
     }
 
     public function getSourceContext()

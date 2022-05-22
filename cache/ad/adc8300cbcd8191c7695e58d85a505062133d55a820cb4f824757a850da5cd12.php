@@ -53,7 +53,10 @@ class __TwigTemplate_9c3e91833de1d2a4e662706ab64a384f271c2617e941c4641beb2b979fa
         // line 13
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         echo "assets/img/icons/Frame 9.svg\" 
-                     alt=\"Металлопрокат Алматы - Abiward\" 
+                     alt=\"";
+        // line 14
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["settings"] ?? null), "copyright", [], "any", false, false, false, 14), "html", null, true);
+        echo "\" 
                      class=\"logo-block__img\"
                   >
                </a>
@@ -74,9 +77,15 @@ class __TwigTemplate_9c3e91833de1d2a4e662706ab64a384f271c2617e941c4641beb2b979fa
                      alt=\"Delivery Abiward\" 
                      class=\"promo-label__icon\"
                   >
-                  <span>По городу работает Доставка!</span>
+                  <span>";
+        // line 29
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["translate"] ?? null), "delivery", [], "any", false, false, false, 29), "html", null, true);
+        echo "</span>
                   <span class=\"promo-label__dot\"></span>
-                  <span>в течении дня</span>
+                  <span>";
+        // line 31
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["translate"] ?? null), "delivery_line", [], "any", false, false, false, 31), "html", null, true);
+        echo "</span>
                </div>
             </div>
             <div class=\"header-top__contact header-contact\">
@@ -101,28 +110,39 @@ class __TwigTemplate_9c3e91833de1d2a4e662706ab64a384f271c2617e941c4641beb2b979fa
                      <a href=\"";
         // line 47
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "\" class=\"main-nav__a\">Главная</a>
+        echo "\" class=\"main-nav__a\">";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["translate"] ?? null), "menu_main", [], "any", false, false, false, 47), "html", null, true);
+        echo "</a>
                   </li>
                   <li class=\"main-nav__li\">
                      <a href=\"";
         // line 50
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "pages/?id=1\" class=\"main-nav__a\">О компании</a>
+        echo "pages/?id=1\" class=\"main-nav__a\">";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["translate"] ?? null), "menu_about", [], "any", false, false, false, 50), "html", null, true);
+        echo "</a>
                   </li>
                   <li class=\"main-nav__li\">
                      <a href=\"";
         // line 53
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "catalog\" class=\"main-nav__a\">Продукция</a>
+        echo "catalog\" class=\"main-nav__a\">";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["translate"] ?? null), "menu_products", [], "any", false, false, false, 53), "html", null, true);
+        echo "</a>
                   </li>
                   <li class=\"main-nav__li\">
                      <a href=\"";
         // line 56
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "pages/?id=3\" class=\"main-nav__a\">Прайс-лист</a>
+        echo "pages/?id=3\" class=\"main-nav__a\">";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["translate"] ?? null), "menu_price", [], "any", false, false, false, 56), "html", null, true);
+        echo "</a>
                   </li>
                   <li class=\"main-nav__li\">
-                     <a href=\"#\" class=\"main-nav__a\">Контакты</a>
+                     <a href=\"#\" class=\"main-nav__a\">";
+        // line 59
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["translate"] ?? null), "menu_contacts", [], "any", false, false, false, 59), "html", null, true);
+        echo "</a>
                   </li>
                </ul>
             </nav>
@@ -140,25 +160,27 @@ class __TwigTemplate_9c3e91833de1d2a4e662706ab64a384f271c2617e941c4641beb2b979fa
         // line 66
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         echo "assets/img/icons/planet-earth-svgrepo-com (1) 1.svg\" 
-                     class=\"lang-switcher__icon\" 
-                     alt=\"выбрать язык\"
+                     class=\"lang-switcher__icon\"
                   >
                   ";
-        // line 70
+        // line 69
         if ((($context["lang"] ?? null) != "ru")) {
             echo "Русский";
         } else {
             echo "Казакша";
         }
-        // line 71
+        // line 70
         echo "               </a>
             </div>
             <div class=\"header-bottom__callback\">
                <a href=\"";
-        // line 74
+        // line 73
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
         echo "#callback\" class=\"btn btn--yellow\">
-                  Заказать звонок
+                  ";
+        // line 74
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["translate"] ?? null), "callback", [], "any", false, false, false, 74), "html", null, true);
+        echo "
                </a>
             </div>
          </div>
@@ -179,7 +201,7 @@ class __TwigTemplate_9c3e91833de1d2a4e662706ab64a384f271c2617e941c4641beb2b979fa
 
     public function getDebugInfo()
     {
-        return array (  159 => 74,  154 => 71,  148 => 70,  141 => 66,  132 => 64,  121 => 56,  115 => 53,  109 => 50,  103 => 47,  92 => 39,  86 => 36,  72 => 25,  65 => 21,  54 => 13,  49 => 11,  37 => 1,);
+        return array (  182 => 74,  178 => 73,  173 => 70,  167 => 69,  161 => 66,  152 => 64,  144 => 59,  136 => 56,  128 => 53,  120 => 50,  112 => 47,  101 => 39,  95 => 36,  87 => 31,  82 => 29,  75 => 25,  68 => 21,  58 => 14,  54 => 13,  49 => 11,  37 => 1,);
     }
 
     public function getSourceContext()

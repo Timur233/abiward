@@ -2,7 +2,7 @@
     <div class="container">
         <div class="section__title">
             <h2 class="section-title__h2">
-                Наша продукция:
+                {{ translate.our_products }}
             </h2>
         </div>
         <div class="catalog__list">
@@ -18,7 +18,7 @@
                             {{ item.title }}
                         </h4>
                         <a href="{{base_url}}catalog?id={{ item.id }}" class="category-item__link">
-                            подробнее
+                            {{ translate.more }}
                         </a>
                         {% if is_admin %}
                             <br>
@@ -26,8 +26,9 @@
                                 data-table="abi_catalog"
                                 data-command="DELETE" 
                                 data-id="{{ item.id }}"
+                                style="text-transform: lower-case"
                             >
-                                удалить
+                                {{ translate.delete }}
                             </button>
                             <br>
                             <button class="category-item__link modal-link" 
@@ -35,8 +36,9 @@
                                 data-command="UPDATE" 
                                 data-fields="text=title|textarea=content|image=image" 
                                 data-id="{{ item.id }}"
+                                style="text-transform: lower-case"
                             >
-                                редактировать
+                                {{ translate.edit }}
                             </button>
                         {% endif %}
                     </div>
@@ -48,7 +50,7 @@
                     data-command="INSERT" 
                     data-fields="text=title|textarea=content|image=image"
                 >
-                    Создать 
+                    {{ translate.create }} 
                 </button>
             {% endif %}
         </div>

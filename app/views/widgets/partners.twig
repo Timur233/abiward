@@ -2,14 +2,14 @@
     <div class="container">
         <div class="section__title">
             <h2 class="section-title__h2">
-                Наши партнеры 
+                {{ translate.partners }} 
                 {% if is_admin %}
                     <button class="modal-link" 
                         data-table="abi_partners"
                         data-command="INSERT" 
                         data-fields="image=image"
                     >
-                        добавить
+                        {{ translate.add }} 
                     </button>
                 {% endif %}
             </h2>

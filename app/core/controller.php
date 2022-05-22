@@ -7,6 +7,7 @@
 	
         public $model;
         public $view;
+        public $translate_data = 'test';
         
         function __construct()
         {

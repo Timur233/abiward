@@ -16,7 +16,7 @@
                                 data-command="INSERT" 
                                 data-fields="text=title|textarea=content|image=image"
                             >
-                                    Создать
+                                    {{ translate.create }}
                             </button>
                         </li>
                     {% endif %}
@@ -41,14 +41,14 @@
                         data-fields="text=title|textarea=content|image=image"
                         data-id="{{ active_catalog.id }}"
                     >
-                        Редактировать 
+                        {{ translate.edit }} 
                     </button>  
                     <button class="btn btn--red modal-link" type="button" 
                         data-table="abi_catalog"
                         data-command="DELETE" 
                         data-id="{{ active_catalog.id }}"
                     >
-                        Удалить 
+                        {{ translate.delete }} 
                     </button>
                 </div>   
                 {% endif %}

@@ -17,7 +17,7 @@
                                         data-fields="textarea=content|image=image"
                                         data-id="{{ item.id }}"
                                     >
-                                        редактировать
+                                        {{ translate.edit }}
                                     </button>
                                 {% endif %}
                             </div>
@@ -43,7 +43,7 @@
                     data-command="INSERT" 
                     data-fields="textarea=content|image=image"
                 >
-                    + добавить
+                    + {{ translate.add }}
                 </button>
             {% endif %}
         </div>

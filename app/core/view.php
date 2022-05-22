@@ -24,6 +24,7 @@
             $data['lang']       = LANG;
             $data['is_admin']   = isset($_SESSION['user_id']) ? true : false;
             $data['settings']   = $settings;
+            $data['translate']  = json_decode($settings['site_translater'], true);
 
             $data['page_content'] = $template->render($data);
 

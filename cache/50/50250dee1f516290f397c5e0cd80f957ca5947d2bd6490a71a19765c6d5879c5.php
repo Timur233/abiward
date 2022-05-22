@@ -57,17 +57,21 @@ class __TwigTemplate_c5ce64fc6d82167ebf6fd282863521bea307fb3b6658be173fb44aa9395
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["why_are_we"] ?? null), "id", [], "any", false, false, false, 13), "html", null, true);
             echo "\"
                             >
-                                редактировать
+                                
+                                ";
+            // line 16
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["translate"] ?? null), "edit", [], "any", false, false, false, 16), "html", null, true);
+            echo " 
                             </button>
                         ";
         }
-        // line 18
+        // line 19
         echo "                    </h2>
                 </div>
                 <div class=\"reviews__about-us\">
                     ";
-        // line 21
-        echo twig_get_attribute($this->env, $this->source, ($context["why_are_we"] ?? null), "content", [], "any", false, false, false, 21);
+        // line 22
+        echo twig_get_attribute($this->env, $this->source, ($context["why_are_we"] ?? null), "content", [], "any", false, false, false, 22);
         echo "
                 </div>
             </div>
@@ -75,9 +79,9 @@ class __TwigTemplate_c5ce64fc6d82167ebf6fd282863521bea307fb3b6658be173fb44aa9395
                 <div class=\"reviews-swiper swiper-container\">
                     <div class=\"swiper-wrapper\">
                         ";
-        // line 27
+        // line 28
         if (($context["is_admin"] ?? null)) {
-            // line 28
+            // line 29
             echo "                            <div 
                                 class=\"reviews-swiper__item swiper-slide\" style=\"height: 100%;\"
                             >
@@ -87,62 +91,65 @@ class __TwigTemplate_c5ce64fc6d82167ebf6fd282863521bea307fb3b6658be173fb44aa9395
                                     data-fields=\"image=image\"
                                     style=\"width: 100%; height: 100%\"
                                 >
-                                    + Создать 
+                                    + ";
+            // line 38
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["translate"] ?? null), "create", [], "any", false, false, false, 38), "html", null, true);
+            echo "  
                                 </button>
                             </div>
                         ";
         }
-        // line 41
+        // line 42
         echo "                        ";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["reviews"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 42
+            // line 43
             echo "                            <div 
                                 class=\"reviews-swiper__item swiper-slide\"
                             >
                                 <a href=\"";
-            // line 45
+            // line 46
             echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
             echo "uploads/";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "image", [], "any", false, false, false, 45), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "image", [], "any", false, false, false, 46), "html", null, true);
             echo "\" 
                                    class=\"reviews__link\" data-fslightbox=\"first-lightbox\">
                                     <img 
                                         class=\"reviews__img\"
                                         src=\"";
-            // line 49
-            echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
+            // line 50
+            echo twig_escape_filter($this->env, ($context["source_"] ?? null), "html", null, true);
             echo "uploads/";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "image", [], "any", false, false, false, 49), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "image", [], "any", false, false, false, 50), "html", null, true);
             echo "\" 
                                         alt=\"\"
                                     >
                                 </a>
                                 ";
-            // line 53
+            // line 54
             if (($context["is_admin"] ?? null)) {
-                // line 54
+                // line 55
                 echo "                                    <button class=\"modal-link delete-link\" 
                                         data-table=\"abi_reviews\"
                                         data-command=\"DELETE\" 
                                         data-id=\"";
-                // line 57
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 57), "html", null, true);
+                // line 58
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 58), "html", null, true);
                 echo "\"
                                     >
                                         x
                                     </button>
                                 ";
             }
-            // line 62
+            // line 63
             echo "                            </div>
                         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 64
+        // line 65
         echo "                    </div>
                 </div>
             </div>
@@ -163,7 +170,7 @@ class __TwigTemplate_c5ce64fc6d82167ebf6fd282863521bea307fb3b6658be173fb44aa9395
 
     public function getDebugInfo()
     {
-        return array (  146 => 64,  139 => 62,  131 => 57,  126 => 54,  124 => 53,  115 => 49,  106 => 45,  101 => 42,  96 => 41,  81 => 28,  79 => 27,  70 => 21,  65 => 18,  57 => 13,  51 => 9,  49 => 8,  45 => 7,  37 => 1,);
+        return array (  153 => 65,  146 => 63,  138 => 58,  133 => 55,  131 => 54,  122 => 50,  113 => 46,  108 => 43,  103 => 42,  96 => 38,  85 => 29,  83 => 28,  74 => 22,  69 => 19,  63 => 16,  57 => 13,  51 => 9,  49 => 8,  45 => 7,  37 => 1,);
     }
 
     public function getSourceContext()

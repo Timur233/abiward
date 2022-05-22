@@ -38,7 +38,10 @@ class __TwigTemplate_c21f0aa91f0ec172a68603b43210da40db34b7041c89f3e8fe8861213ac
     <div class=\"container\">
         <div class=\"section__title\">
             <h2 class=\"section-title__h2\">
-                Наши партнеры 
+                ";
+        // line 5
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["translate"] ?? null), "partners", [], "any", false, false, false, 5), "html", null, true);
+        echo " 
                 ";
         // line 6
         if (($context["is_admin"] ?? null)) {
@@ -48,7 +51,10 @@ class __TwigTemplate_c21f0aa91f0ec172a68603b43210da40db34b7041c89f3e8fe8861213ac
                         data-command=\"INSERT\" 
                         data-fields=\"image=image\"
                     >
-                        добавить
+                        ";
+            // line 12
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["translate"] ?? null), "add", [], "any", false, false, false, 12), "html", null, true);
+            echo " 
                     </button>
                 ";
         }
@@ -117,7 +123,7 @@ class __TwigTemplate_c21f0aa91f0ec172a68603b43210da40db34b7041c89f3e8fe8861213ac
 
     public function getDebugInfo()
     {
-        return array (  102 => 38,  95 => 36,  87 => 31,  82 => 28,  80 => 27,  72 => 24,  66 => 20,  62 => 19,  56 => 15,  46 => 7,  44 => 6,  37 => 1,);
+        return array (  108 => 38,  101 => 36,  93 => 31,  88 => 28,  86 => 27,  78 => 24,  72 => 20,  68 => 19,  62 => 15,  56 => 12,  49 => 7,  47 => 6,  43 => 5,  37 => 1,);
     }
 
     public function getSourceContext()

@@ -1,7 +1,7 @@
 <section id="callback" class="callback callback__section section" style="background-image: url('http://localhost/abiward//assets/img/callback/bg.jpeg');">
    <div class="container">
       <div class="section-title">
-         <h2 class="section-title__h2 callback__title">Оставить заявку</h2>
+         <h2 class="section-title__h2 callback__title">{{ translate.callback_app }}</h2>
       </div>
       <form class="callback__form" action="#">
          <div class="flex">
@@ -12,8 +12,8 @@
                   class="input-group__input" 
                   id="staticTopFormName" 
                   name="name" 
-                  placeholder="Телефон" 
-                  fieldname="Имя"
+                  placeholder="{{ translate.name }}" 
+                  fieldname="{{ translate.name }}"
                >
             </div>
 
@@ -23,8 +23,8 @@
                   class="input-group__input" 
                   id="staticTopFormPhone" 
                   name="phone" 
-                  placeholder="Телефон" 
-                  fieldname="Телефон" 
+                  placeholder="{{ translate.phone }}" 
+                  fieldname="{{ translate.phone }}" 
                   required="required"
                >
             </div>
@@ -34,7 +34,7 @@
                   class="btn btn--yellow send-form-button callback__btn" 
                   onclick="frontend.form(this); return false"
                >
-                  Оставить заявку
+                  {{ translate.callback_app }}
                </button>
             </div>
 
