@@ -53,7 +53,7 @@ class __TwigTemplate_c21f0aa91f0ec172a68603b43210da40db34b7041c89f3e8fe8861213ac
                     >
                         ";
             // line 12
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["translate"] ?? null), "add", [], "any", false, false, false, 12), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["translate"] ?? null), "create", [], "any", false, false, false, 12), "html", null, true);
             echo " 
                     </button>
                 ";
