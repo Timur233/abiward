@@ -6,7 +6,7 @@
     <div class="container">
         <div class="flex">
             <div class="flex__3 main-catalog__sidebar">
-                <ul class="main-catalog__list main-catalog-list">
+                <ul class="main-catalog__list main-catalog-list swiper-wrapper">
 
                     {% if is_admin %}
                         <li class="main-catalog-list__item {% if item.id == active_catalog.id %} main-catalog-list__item--active {% endif %}">
@@ -14,7 +14,7 @@
                                 class="main-catalog-list__link modal-link"
                                 data-table="abi_catalog"
                                 data-command="INSERT" 
-                                data-fields="text=title|textarea=content|image=image"
+                                data-fields="text=title|textarea=content|price=price|image=image"
                             >
                                     {{ translate.create }}
                             </button>
@@ -22,7 +22,7 @@
                     {% endif %}
 
                     {% for item in catalog_list %}
-                        <li class="main-catalog-list__item {% if item.id == active_catalog.id %} main-catalog-list__item--active {% endif %}">
+                        <li class="main-catalog-list__item swiper-slide {% if item.id == active_catalog.id %} main-catalog-list__item--active {% endif %}">
                             <a href="{{ base_url }}catalog/?id={{ item.id }}" class="main-catalog-list__link">
                                 {{ item.title }}
                             </a>
@@ -38,7 +38,7 @@
                     <button class="btn btn--yellow btn--outline modal-link" type="button" 
                         data-table="abi_catalog"
                         data-command="UPDATE" 
-                        data-fields="text=title|textarea=content|image=image"
+                        data-fields="text=title|textarea=content|price=price|image=image"
                         data-id="{{ active_catalog.id }}"
                     >
                         {{ translate.edit }} 

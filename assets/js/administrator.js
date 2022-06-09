@@ -51,6 +51,7 @@ function modalBuilder(button) {
         table: button.dataset.table,
         command: button.dataset.command,
         fields: button.dataset.fields,
+        translate: button.dataset.translate === '0' ? false : true,
         id: button.dataset.id ?? null,
     };
 
@@ -95,6 +96,19 @@ function modalBuilder(button) {
                     block.classList = 'form-field';
                     block.append(label, element);
                     break;
+
+                case 'price':
+                    element = document.createElement('input');
+                    element.classList = 'input';
+                    element.type = 'number';
+                    element.required = 'required';
+                    element.value = data[field.fieldName + selectedLang] ? data[field.fieldName + selectedLang] : '';
+
+                    label.textContent = 'Цена';
+
+                    block.classList = 'form-field';
+                    block.append(label, element);
+                    break;
                 
                 case 'textarea': 
                     element = document.createElement('textarea');
@@ -135,7 +149,7 @@ function modalBuilder(button) {
 
         tinymce.init({
             selector: '.tiny',
-            plugins: 'a11ychecker advcode casechange export formatpainter image editimage linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tableofcontents tinycomments tinymcespellchecker',
+            plugins: 'advcode casechange export formatpainter image editimage linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tableofcontents tinycomments tinymcespellchecker',
             toolbar: 'casechange bullist numlist formatpainter pageembed image table code',
             toolbar_mode: 'floating',
             tinycomments_mode: 'embedded',
@@ -268,7 +282,7 @@ function modalBuilder(button) {
         const traslateFields = [];
         
         modalData.fields.map(field => {
-            if (field.fieldType === 'text' || field.fieldType === 'textarea') {
+            if ((field.fieldType === 'text' && modalData.translate) || (field.fieldType === 'price' && modalData.translate) || (field.fieldType === 'textarea' && modalData.translate)) {
                 traslateFields.push({
                     fieldType: field.fieldType,
                     fieldName: field.fieldName + '_kk'
@@ -281,7 +295,10 @@ function modalBuilder(button) {
         getData(modalData.id, modalData.table, [...modalData.fields, ...traslateFields])
             .then(res => res.json())
             .then((res) => {
-                renderLandSwitcher(res);
+                if (modalData.translate) {
+                    renderLandSwitcher(res);
+                }
+
                 renderFields(res);
 
                 modalContent.append(modalFields);
@@ -290,7 +307,7 @@ function modalBuilder(button) {
 
                 tinymce.init({
                     selector: '.tiny',
-                    plugins: 'a11ychecker advcode casechange export formatpainter image editimage linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tableofcontents tinycomments tinymcespellchecker',
+                    plugins: 'advcode casechange export formatpainter image editimage linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tableofcontents tinycomments tinymcespellchecker',
                     toolbar: 'casechange bullist numlist formatpainter pageembed image table code',
                     toolbar_mode: 'floating',
                     tinycomments_mode: 'embedded',

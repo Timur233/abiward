@@ -55,6 +55,8 @@
                 }
             }
 
+            // return "SELECT ${select_fields} FROM ${table} WHERE ${prefix}id = ${id}";
+
             return $this->db->execute(
                 "SELECT ${select_fields} FROM ${table} WHERE ${prefix}id = ${id}"
             )->fetch_assoc();

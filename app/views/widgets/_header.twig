@@ -58,6 +58,11 @@
                   <li class="main-nav__li">
                      <a href="{{ base_url }}contacts" class="main-nav__a">{{ translate.menu_contacts }}</a>
                   </li>
+                  {% if is_admin %}
+                     <li class="main-nav__li">
+                        <a href="{{ base_url }}form" class="main-nav__a">Заявки</a>
+                     </li>
+                  {% endif %}
                </ul>
             </nav>
             <div class="header-bottom__lang lang-switcher">

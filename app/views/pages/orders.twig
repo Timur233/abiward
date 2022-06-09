@@ -1,0 +1,60 @@
+{{ include('widgets/_header.twig') }}
+
+{{ include('widgets/breadcrumbs.twig') }}
+
+<section class="section manager">
+    <div class="container">
+        <div class="orders__list">
+            <div class="orders__item orders__title">
+                <div class="orders__field">Имя</div>
+                <div class="orders__field">Телефон</div>
+                <div class="orders__field">Ответственный менеджер</div>
+                <div class="orders__field">Коментарий</div>
+                <div class="orders__field">Дата заказа</div>
+            </div>
+            {% for order in orders %}
+                <div class="orders__item">
+                    <div class="orders__field">{{ order.user_name }}</div>
+                    <div class="orders__field">{{ order.phone }}</div>
+                    <div class="orders__field">
+                        {% if order.manager %}
+                            {{ order.manager }}
+                        {% else %}
+                            <a href="{{ base_url }}form/confirm?order={{ order.id }}" class="confirm-link">
+                                Принять заявку
+                            </a>
+                        {% endif %}
+                    </div>
+                    <div class="orders__field">
+                        {{ order.comment|raw }}
+                        <a href="#" class="modal-link"
+                            data-table="abi_orders"
+                            data-command="UPDATE" 
+                            data-fields="textarea=comment"
+                            data-id="{{ order.id }}"
+                            data-translate="0"
+                        >
+                            Редактировать
+                        </a>
+                    </div>
+                    <div class="orders__field">{{ order.date }}</div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="pagination">
+            {% if prev_page %}
+                <a href="{{ base_url }}form?page={{ prev_page }}" class="btn btn--outline">
+                    Назад
+                </a>
+            {% endif %}
+            {% if next_page %}
+                <a href="{{ base_url }}form?page={{ next_page }}" class="btn btn--outline">
+                    Вперед
+                </a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+{{ include('widgets/_footer.twig') }}

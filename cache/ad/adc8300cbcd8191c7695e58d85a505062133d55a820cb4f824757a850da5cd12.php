@@ -146,11 +146,24 @@ class __TwigTemplate_9c3e91833de1d2a4e662706ab64a384f271c2617e941c4641beb2b979fa
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["translate"] ?? null), "menu_contacts", [], "any", false, false, false, 59), "html", null, true);
         echo "</a>
                   </li>
-               </ul>
+                  ";
+        // line 61
+        if (($context["is_admin"] ?? null)) {
+            // line 62
+            echo "                     <li class=\"main-nav__li\">
+                        <a href=\"";
+            // line 63
+            echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
+            echo "form\" class=\"main-nav__a\">Заявки</a>
+                     </li>
+                  ";
+        }
+        // line 66
+        echo "               </ul>
             </nav>
             <div class=\"header-bottom__lang lang-switcher\">
                <a href=\"";
-        // line 64
+        // line 69
         if ((($context["lang"] ?? null) != "ru")) {
             echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         } else {
@@ -159,29 +172,29 @@ class __TwigTemplate_9c3e91833de1d2a4e662706ab64a384f271c2617e941c4641beb2b979fa
         echo "\" class=\"lang-switcher__link\">
                   <img 
                      src=\"";
-        // line 66
+        // line 71
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         echo "assets/img/icons/planet-earth-svgrepo-com (1) 1.svg\" 
                      class=\"lang-switcher__icon\"
                   >
                   ";
-        // line 69
+        // line 74
         if ((($context["lang"] ?? null) != "ru")) {
             echo "Русский";
         } else {
             echo "Казакша";
         }
-        // line 70
+        // line 75
         echo "               </a>
             </div>
             <div class=\"header-bottom__callback\">
                <a href=\"";
-        // line 73
+        // line 78
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
         echo "#callback\" class=\"btn btn--yellow\">
                   ";
-        // line 74
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["translate"] ?? null), "callback", [], "any", false, false, false, 74), "html", null, true);
+        // line 79
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["translate"] ?? null), "callback", [], "any", false, false, false, 79), "html", null, true);
         echo "
                </a>
             </div>
@@ -203,7 +216,7 @@ class __TwigTemplate_9c3e91833de1d2a4e662706ab64a384f271c2617e941c4641beb2b979fa
 
     public function getDebugInfo()
     {
-        return array (  184 => 74,  180 => 73,  175 => 70,  169 => 69,  163 => 66,  154 => 64,  144 => 59,  136 => 56,  128 => 53,  120 => 50,  112 => 47,  101 => 39,  95 => 36,  87 => 31,  82 => 29,  75 => 25,  68 => 21,  58 => 14,  54 => 13,  49 => 11,  37 => 1,);
+        return array (  197 => 79,  193 => 78,  188 => 75,  182 => 74,  176 => 71,  167 => 69,  162 => 66,  156 => 63,  153 => 62,  151 => 61,  144 => 59,  136 => 56,  128 => 53,  120 => 50,  112 => 47,  101 => 39,  95 => 36,  87 => 31,  82 => 29,  75 => 25,  68 => 21,  58 => 14,  54 => 13,  49 => 11,  37 => 1,);
     }
 
     public function getSourceContext()

@@ -1,0 +1,32 @@
+<section class="calc section" id="calc">
+    <div class="container">
+        <div class="section__title">
+            <h2 class="section-title__h2">
+                {{ translate.calc_title }}
+            </h2>
+        </div>
+
+        <div class="flex">
+            <div class="flex__4">
+                <label for="catalog_data">{{ translate.calc_catalog }}</label>
+                <select name="" id="catalog_data" class="calc__select input-group__select">
+                    {% for item in  catalog %}
+                        <option value="{{ item.price }}">
+                            {{ item.title }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="flex__4">
+                <label for="summ_date">{{ translate.length }}</label>
+                <input type="number" class="calc__input input-group__input" value="1">
+            </div>
+            <div class="flex__4 calc__result">
+                <label>{{ translate.calc_result }}</label>
+                <div class="calc__result-text">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

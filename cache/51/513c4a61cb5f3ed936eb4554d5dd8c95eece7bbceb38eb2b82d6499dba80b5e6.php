@@ -103,7 +103,7 @@ class __TwigTemplate_daa9082a834f45ff7e1795507cd731e223ecb96de22dba2bcfaca766031
                             <button class=\"category-item__link modal-link\" 
                                 data-table=\"abi_catalog\"
                                 data-command=\"UPDATE\" 
-                                data-fields=\"text=title|textarea=content|image=image\" 
+                                data-fields=\"text=title|textarea=content|price=price|image=image\" 
                                 data-id=\"";
                 // line 38
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 38), "html", null, true);
@@ -132,7 +132,7 @@ class __TwigTemplate_daa9082a834f45ff7e1795507cd731e223ecb96de22dba2bcfaca766031
             echo "                <button class=\"btn btn--yellow btn--outline modal-link\" type=\"button\" 
                     data-table=\"abi_catalog\"
                     data-command=\"INSERT\" 
-                    data-fields=\"text=title|textarea=content|image=image\"
+                    data-fields=\"text=title|textarea=content|price=price|image=image\"
                 >
                     ";
             // line 53

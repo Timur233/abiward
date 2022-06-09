@@ -48,3 +48,14 @@
         }
     }
 }
+
+.calc {
+    &__input, &__select {
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    & .flex__4 {
+        padding-right: 20px;
+    }
+}

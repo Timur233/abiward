@@ -34,7 +34,7 @@
                             <button class="category-item__link modal-link" 
                                 data-table="abi_catalog"
                                 data-command="UPDATE" 
-                                data-fields="text=title|textarea=content|image=image" 
+                                data-fields="text=title|textarea=content|price=price|image=image" 
                                 data-id="{{ item.id }}"
                                 style="text-transform: lower-case"
                             >
@@ -48,7 +48,7 @@
                 <button class="btn btn--yellow btn--outline modal-link" type="button" 
                     data-table="abi_catalog"
                     data-command="INSERT" 
-                    data-fields="text=title|textarea=content|image=image"
+                    data-fields="text=title|textarea=content|price=price|image=image"
                 >
                     {{ translate.create }} 
                 </button>

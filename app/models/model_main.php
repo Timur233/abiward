@@ -39,7 +39,9 @@
         public function select_catalog() {
             $request = $this->db->execute(
                 "SELECT catalog_id as id, catalog_title" . $this->lang_postfix . " as title, 
-                catalog_content" . $this->lang_postfix . " as content, catalog_image as image
+                catalog_content" . $this->lang_postfix . " as content, 
+                catalog_price" . $this->lang_postfix . " as price, 
+                catalog_image as image
                 FROM abi_catalog"
             );
             $result = [];

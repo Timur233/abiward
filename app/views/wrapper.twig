@@ -23,7 +23,7 @@
   
     {% if is_admin %}
       <script src="{{ source_url }}assets/js/administrator.js"></script>
-      <script src="https://cdn.tiny.cloud/1/pl9t5a6rms35oafg1trngnjckrcpo8lyyh66a3kpehzi0tnk/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+      <script src="https://cdn.tiny.cloud/1/bzhls85k0r3fg5im7hog4p484d7ywdkp06wregz0olcvqaz1/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     {% endif %}
   
     <script>
@@ -126,14 +126,15 @@
             config.slides = 4;
         }
 
-        var slider = new Swiper('.main-catalog-list', {
+        var slider = new Swiper('.main-catalog__sidebar', {
         effect: null,
         loop: true,
-        slidesPerView: config.slides,
+        slidesPerView: 'auto',
         preventClicks: true,
         preventClicksPropagation: false,
         lazyLoadingInPrevNext: true,
-        spaceBetween: 40,
+        spaceBetween: 12,
+        autoHeight: 'auto'
         });
 
         }
@@ -141,6 +142,22 @@
         if (window.outerWidth <= 768) {
             mainCatalogSwiper();
         }
+
+        function calc() {
+            const catalog = document.querySelector('.calc__select');
+            const lenght = document.querySelector('.calc__input');
+            const result = document.querySelector('.calc__result-text');
+            const calcSumm = () => {
+                result.textContent = 'от ' + (catalog.value * lenght.value) + ' тг'
+            }
+
+            catalog.addEventListener('input', calcSumm);
+            lenght.addEventListener('input', calcSumm);
+
+            calcSumm();
+        }
+
+        calc();
 
     </script>
   
